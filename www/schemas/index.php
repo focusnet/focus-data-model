@@ -58,6 +58,10 @@ $types[$last_title] = $types[$last_type_id];
 unset($types[$last_type_id]);
 
 
+// FIXME FIXME FIXME
+// FIXME should inspect content and re-order based on dependencies. 
+// FIXME FIXME FIXME
+
 ?><!DOCTYPE html>
 <html>
 	<head>
