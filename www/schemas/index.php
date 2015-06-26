@@ -11,12 +11,11 @@
  */
 
 $files = glob( '*/*.json');
-sort($fiels, SORT_NATURAL);
-
-$last_title = FALSE;
-$last_type_id = FALSE;
-
+sort($files, SORT_NATURAL);
 // all errors silently discarded
+
+$schemas = array();
+
 foreach ($files as $f) {
 	$content = file_get_contents($f);
 	if ($content === FALSE) {
@@ -33,34 +32,32 @@ foreach ($files as $f) {
 	}
 	
 	$matches = array();
-	if (!preg_match('|^(.*/)v\d+(\.\d+)?$|', $json->id, $matches)) {
+	if (!preg_match('|^(.*)/v\d+(\.\d+)?$|', $json->id, $matches)) {
 		continue;
 	}
 	
-	$type_id = $matches[1];
-	if (!isset($types[$type_id])) {
-		$types[$type_id] = array();
-	}
-	$types[$type_id][$json->id] = $content;
+	$type_id_no_version = $matches[1];
+	$type_id_no_version = rtrim($type_id_no_version, '/');
 	
-	// if we move to a new type, replace its id by the actual title
-	// (we wait for the last version of the type, so we have the latest name displayed)
-	if ($last_type_id && $type_id !== $last_type_id) {
-		$types[$last_title] = $types[$last_type_id];
-		unset($types[$last_type_id]);
+	if (!isset($schemas[$type_id_no_version])) {
+		$schemas[$type_id_no_version] = array('name' => '', 'versions' => array());
 	}
-	$last_type_id = $type_id;
-	$last_title = $json->title;
+	$schemas[$type_id_no_version]['name'] = $json->title;
+	$schemas[$type_id_no_version]['versions'][] = array('uri' => $json->id, 'content' => $content);
+	
+	
 }
-
-// at the end correct the last type being analysed 
-$types[$last_title] = $types[$last_type_id];
-unset($types[$last_type_id]);
-
-
 // FIXME FIXME FIXME
-// FIXME should inspect content and re-order based on dependencies. 
+// FIXME should inspect content and re-order based on dependencies.
+// and retrieve examples $type_id_short = explode('/', $json->id);
+	//$c = count($type_id_short);
+	//$type_id_short = $type_id_short[ $c - 2 ];
+	//$example_file_name = $type_id_short[ $c - 2 ] . '/*.json';
+	
+	 
 // FIXME FIXME FIXME
+
+$duh = 'debug';
 
 ?><!DOCTYPE html>
 <html>
@@ -71,24 +68,29 @@ unset($types[$last_type_id]);
 
 	<body>
 
+	<pre>
+	<?php var_dump($duh); ?>
+	</pre>
+	
 		<h1>JSON Schemas</h1>
 		
 		<p>The following schemas are made available by this server.</p>
 		
 		<hr/>
 		
-		<?php foreach ($types as $name => $versions): ?>
-			<h2><?php print $name; ?></h2>
+		<?php foreach ($schemas as $no_version_uri => $schema): ?>
+			<h2><?php print $schema['name']; ?></h2>
 			<ul>
-				<?php foreach ($versions as $url => $code): ?>
+				<?php foreach ($schema['versions'] as $v): ?>
 					<li>
-						<a href="<?php print $url; ?>"><?php print $url;?></a>
-						<pre><?php print $code; ?></pre>
+						<a href="<?php print $v['uri']; ?>"><?php print $v['uri'];?></a>
+						<pre><?php print print $v['content']; ?></pre>
 					</li>
 				<?php endforeach; ?>
 			</ul>
 			<hr/>
 		<?php endforeach; ?>
+		
 		
 	</body>
 
