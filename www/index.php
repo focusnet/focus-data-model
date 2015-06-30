@@ -10,13 +10,14 @@
  * This file displays all the schemas being stored in this repository.
  */
 
-$files = glob( '*/*.json');
+$files = glob('schemas/*/*.json');
 sort($files, SORT_NATURAL);
 // all errors silently discarded
 
 $schemas = array();
 
 foreach ($files as $f) {
+	
 	$content = file_get_contents($f);
 	if ($content === FALSE) {
 		continue;
@@ -36,6 +37,11 @@ foreach ($files as $f) {
 		continue;
 	}
 	
+	$diagram_path = preg_replace('/^schemas(\/.*\.)json$/', 'documentation/diagrams$1png', $f);
+	if (!is_readable($diagram_path)) {
+		$diagram_path = FALSE;
+	}
+	
 	$type_id_no_version = $matches[1];
 	$type_id_no_version = rtrim($type_id_no_version, '/');
 	
@@ -43,10 +49,13 @@ foreach ($files as $f) {
 		$schemas[$type_id_no_version] = array('name' => '', 'versions' => array());
 	}
 	$schemas[$type_id_no_version]['name'] = $json->title;
-	$schemas[$type_id_no_version]['versions'][] = array('uri' => $json->id, 'content' => $content);
-	
-	
+	$schemas[$type_id_no_version]['versions'][] = array(
+			'uri' => $json->id, 
+			'content' => $content,
+			'diagram' => $diagram_path
+	);
 }
+
 // FIXME FIXME FIXME
 // FIXME should inspect content and re-order based on dependencies.
 // and retrieve examples $type_id_short = explode('/', $json->id);
@@ -57,13 +66,15 @@ foreach ($files as $f) {
 	 
 // FIXME FIXME FIXME
 
-$duh = 'debug';
+$duh = 'yarr!';
 
 ?><!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="UTF-8">
 		<title>JSON Schemas</title>
+		<link href="misc/css/styles.css" rel="stylesheet" type="text/css" />
+		
 	</head>
 
 	<body>
@@ -84,7 +95,10 @@ $duh = 'debug';
 				<?php foreach ($schema['versions'] as $v): ?>
 					<li>
 						<a href="<?php print $v['uri']; ?>"><?php print $v['uri'];?></a>
-						<pre><?php print print $v['content']; ?></pre>
+						<?php if ($v['diagram']): ?>
+							<img src="<?php print $v['diagram']; ?>" alt="<?php print $v['uri']; ?>" />
+						<?php endif; ?>
+						<pre><?php print $v['content']; ?></pre>
 					</li>
 				<?php endforeach; ?>
 			</ul>

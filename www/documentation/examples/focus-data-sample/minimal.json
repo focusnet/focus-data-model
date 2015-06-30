@@ -1,0 +1,37 @@
+{
+	"type": "http://reference.focusnet.eu/schemas/focus-data-sample/v0.1",
+	"sample": {
+		"abc": {
+   	 "type": "numeric",
+   	 "value": 123.6666666
+    },
+    "abc1": {
+   	 "value": "a string"
+    },
+    "abc2": {
+   	 "type": "string",
+   	 "value": "pouet"
+    },
+    "abcc": {
+   	 "type": "string",
+   	 "value": "pouet"
+    },
+    "abc4": {
+    	 "type": "string",
+    	 "value": "pouet"
+     }
+    ,
+    "abc224": {
+   	 "type": "array-string",
+   	 "value": ["a", "12"]
+    }
+    ,
+    "abc2a24": {
+   	 "type": "array-numeric",
+   	 "value": [3.121, 3],
+   	 "morevalues": "hereyouare"
+    },
+    
+    "miam": "1222"
+	}
+}
