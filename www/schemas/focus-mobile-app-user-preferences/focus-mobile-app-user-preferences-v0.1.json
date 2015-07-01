@@ -62,7 +62,7 @@
 				},
 				"path": {
 					"type": "string",
-					"FIXME": "add a pattern"
+					"FIXME": "add a pattern?"
 				},
 				"order": {
 					"type": "integer"
