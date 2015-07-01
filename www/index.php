@@ -1,18 +1,20 @@
 <?php 
 /*
+ * This file displays all the files made available by this server. It does
+ * not fetch remote schemas.
+ *
+ * All errors are silently discarded.
+ * 
+ * --
+ * 
  * This file is part of the focus-resources-server package.
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-/**
- * This file displays all the schemas being stored in this repository.
- */
-
 $files = glob('schemas/*/*.json');
 sort($files, SORT_NATURAL);
-// all errors silently discarded
 
 $schemas = array();
 $schemas_version_ref = array();
@@ -78,10 +80,6 @@ foreach ($files as $f) {
 
 // FIXME FIXME FIXME
 // FIXME should inspect content and re-order based on dependencies.
-// and retrieve examples $type_id_short = explode('/', $json->id);
-	//$c = count($type_id_short);
-	//$type_id_short = $type_id_short[ $c - 2 ];
-	//$example_file_name = $type_id_short[ $c - 2 ] . '/*.json';
 // FIXME FIXME FIXME
 
 $duh = 'debug';
