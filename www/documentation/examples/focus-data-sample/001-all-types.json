@@ -1,0 +1,42 @@
+{
+	"type": "http://reference.focusnet.eu/schemas/focus-data-sample/v0.1",
+	"sample": {
+		
+		"prop1": "a simple string without explicit type setting",
+		
+		"prop2": {
+			"type": "numeric",
+			"value": 123.6666666
+		},
+		
+		"prop3": {
+			"value": "a string (this is the default type)"
+		},
+		
+		"prop4": {
+			"type": "string",
+			"value": "pouet"
+		},
+		
+		"prop5": {
+			"type": "string",
+			"value": "pouet"
+		},
+		
+		"prop6": {
+			"type": "string",
+			"value": "pouet"
+		},
+		
+		"prop7": {
+			"type": "array-string",
+			"value": ["a", "12"]
+		},
+		
+		"prop8": {
+			"type": "array-numeric",
+			"value": [3.121, 3]
+		}
+		
+	}
+}
