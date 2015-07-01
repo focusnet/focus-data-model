@@ -1,0 +1,74 @@
+{
+	"$schema": "http://json-schema.org/schema#",
+	"id": "http://reference.focusnet.eu/schemas/focus-mobile-app-user-preferences/v0.1",
+	"title": "FOCUS Mobile application - User preferences",
+	"description": "The different user-defined preferences of the FOCUS Mobile application.",
+	"allOf": [
+			{
+				"$ref": "http://reference.focusnet.eu/schemas/focus-object/v0.1#/definitions/metadata"
+			},
+			{
+				"$ref": "#/definitions/preferences"
+			}
+	],
+	"definitions": {
+		"preferences": {
+			"properties": {
+				
+				"settings": {
+					"type": "object",
+					"properties": {
+						"language": {
+							"type": "string",
+							"pattern": "^[a-z]{2}(-[A-Z]{2})?$"
+						},
+						"notifications": {
+							"type": "object",
+							"properties": {
+								"vibrate": {
+									"type": "boolean"
+								},
+								"ring": {
+									"type": "boolean"
+								}
+							}
+						}
+					},
+					"required": ["language", "notifications"]
+				},
+				
+				"bookmarks": {
+					"type": "object",
+					"properties": {
+						"pages": {
+							"type": "array",
+							"items": { "$ref": "#/definitions/bookmark-links" }
+						},
+						"tools": {
+							"type": "array",
+							"items": { "$ref": "#/definitions/bookmark-links" }
+						}
+					}
+				}
+
+			},
+			"required": ["settings"]
+		},
+		
+		"bookmark-links": {
+			"properties": {
+				"name": {
+					"type": "string"
+				},
+				"path": {
+					"type": "string",
+					"FIXME": "add a pattern"
+				},
+				"order": {
+					"type": "integer"
+				}
+			},
+			"required": ["name", "path"]
+		}
+	}
+}

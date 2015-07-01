@@ -1,0 +1,52 @@
+{
+	"type": "http://reference.focusnet.eu/schemas/focus-mobile-app-user-preferences/v0.1",
+	
+	"settings": {
+		"language": "fr-CH",
+
+		"notifications": {
+			"vibrate": true,
+			"ring": false
+		}
+	},
+
+	"bookmarks": {
+		
+		"pages": [
+			{
+				"name": "Stand #233",
+				"path": "view.stand[233]"
+			},
+			{
+				"name": "Employees overview for Nidau parcel",
+				"path": "view.stand[233].hr",
+				"order": 1
+			},
+			{
+				"name": "Problematic truck",
+				"path": "view.machine[456].enginetemp",
+				"order": 4
+			},
+			{
+				"name": "Welcome page",
+				"path": "view.__init__",
+				"order": 0
+			}
+		],
+		
+		"tools": [
+			{
+				"name": "Time tracker",
+				"path": "view.__init__.timetracker",
+				"order": 0
+			},
+			{
+				"name": "Polterluchs on stand #123",
+				"path": "view.stand[123].polterluchs",
+				"order": 1
+			}
+		]
+	
+	}
+	
+}
