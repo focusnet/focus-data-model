@@ -18,27 +18,17 @@
 		
 		"prop4": {
 			"type": "string",
-			"value": "pouet"
+			"value": "an explicit string"
 		},
 		
 		"prop5": {
-			"type": "string",
-			"value": "pouet"
+			"type": "array-string",
+			"value": ["an", "array", "of", "strings"]
 		},
 		
 		"prop6": {
-			"type": "string",
-			"value": "pouet"
-		},
-		
-		"prop7": {
-			"type": "array-string",
-			"value": ["a", "12"]
-		},
-		
-		"prop8": {
 			"type": "array-numeric",
-			"value": [3.121, 3]
+			"value": [1, 1.5, 2]
 		}
 		
 	}
