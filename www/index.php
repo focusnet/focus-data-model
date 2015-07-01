@@ -96,7 +96,7 @@ $duh = 'yarr!';
 					<li>
 						<a href="<?php print $v['uri']; ?>"><?php print $v['uri'];?></a>
 						<?php if ($v['diagram']): ?>
-							<img src="<?php print $v['diagram']; ?>" alt="<?php print $v['uri']; ?>" />
+							&ndash; <a class="diagram" href="<?php print $v['diagram']; ?>">Diagram</a>
 						<?php endif; ?>
 						<pre><?php print $v['content']; ?></pre>
 					</li>
