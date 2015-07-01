@@ -1,4 +1,6 @@
 {
+	"__comment": "Simple user preferences",
+		
 	"type": "http://reference.focusnet.eu/schemas/focus-mobile-app-user-preferences/v0.1",
 	
 	"settings": {

@@ -1,3 +1,5 @@
 {
+	"__comment": "The minimum information required by the backend is the 'type' of object being transmitted. Other fields of the focus-object type will be set by the backend.",
+
 	"type": "http://reference.focusnet.eu/schemas/focus-object/v0.1"
 }
