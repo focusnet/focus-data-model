@@ -21,20 +21,9 @@
 						"language": {
 							"type": "string",
 							"pattern": "^[a-z]{2}(-[A-Z]{2})?$"
-						},
-						"notifications": {
-							"type": "object",
-							"properties": {
-								"vibrate": {
-									"type": "boolean"
-								},
-								"ring": {
-									"type": "boolean"
-								}
-							}
 						}
 					},
-					"required": ["language", "notifications"]
+					"required": ["language"]
 				},
 				
 				"bookmarks": {

@@ -1,7 +1,7 @@
 {
 	"$schema": "http://json-schema.org/schema#",
 	"id": "http://reference.focusnet.eu/schemas/focus-data-sample/v0.1",
-	"title": "FOCUS simple data sample container",
+	"title": "FOCUS data sample container",
 	"description": "This object defines the basic structure for storing a flat data array.",
 	"allOf": [
 			{
