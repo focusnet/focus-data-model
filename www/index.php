@@ -15,6 +15,7 @@ sort($files, SORT_NATURAL);
 // all errors silently discarded
 
 $schemas = array();
+$schemas_version_ref = array();
 
 foreach ($files as $f) {
 	
@@ -49,11 +50,30 @@ foreach ($files as $f) {
 		$schemas[$type_id_no_version] = array('name' => '', 'versions' => array());
 	}
 	$schemas[$type_id_no_version]['name'] = $json->title;
-	$schemas[$type_id_no_version]['versions'][] = array(
+	$cnt = count($schemas[$type_id_no_version]['versions']);
+	$schemas[$type_id_no_version]['versions'][$cnt] = array(
 			'uri' => $json->id, 
 			'content' => $content,
-			'diagram' => $diagram_path
+			'diagram' => $diagram_path,
+			'examples' => array()
 	);
+	$schemas_version_ref[$json->id] = &$schemas[$type_id_no_version]['versions'][$cnt];
+	
+}
+
+// retrieve examples
+$files = glob('documentation/examples/*/*.json');
+sort($files, SORT_NATURAL);
+foreach ($files as $f) {
+	$content = file_get_contents($f);
+	$json = json_decode($content);
+	if (!isset($json->type)) {
+		continue;
+	}
+	if (!isset($schemas_version_ref[$json->type])) {
+		continue;
+	}
+	$schemas_version_ref[$json->type]['examples'][] = $f;
 }
 
 // FIXME FIXME FIXME
@@ -62,11 +82,9 @@ foreach ($files as $f) {
 	//$c = count($type_id_short);
 	//$type_id_short = $type_id_short[ $c - 2 ];
 	//$example_file_name = $type_id_short[ $c - 2 ] . '/*.json';
-	
-	 
 // FIXME FIXME FIXME
 
-$duh = 'yarr!';
+$duh = 'debug';
 
 ?><!DOCTYPE html>
 <html>
@@ -94,11 +112,23 @@ $duh = 'yarr!';
 			<ul>
 				<?php foreach ($schema['versions'] as $v): ?>
 					<li>
-						<a href="<?php print $v['uri']; ?>"><?php print $v['uri'];?></a>
-						<?php if ($v['diagram']): ?>
-							&ndash; <a class="diagram" href="<?php print $v['diagram']; ?>">Diagram</a>
-						<?php endif; ?>
-						<pre><?php print $v['content']; ?></pre>
+						<div>
+							<a href="<?php print $v['uri']; ?>"><?php print $v['uri'];?></a>
+							<?php if ($v['diagram']): ?>
+								&ndash; <a class="diagram" href="<?php print $v['diagram']; ?>">Diagram</a>
+							<?php endif; ?>
+						</div>
+						<div>
+							Examples:
+							<?php if ($v['examples']): ?>
+								<?php foreach ($v['examples'] as $e): ?>
+									<a href="<?php print $e; ?>"><?php print basename($e); ?></a>
+								<?php endforeach; ?>
+							<?php else: ?>
+								none.
+							<?php endif; ?>
+						</div>
+						<pre>Schema:<br/><?php print $v['content']; ?></pre>
 					</li>
 				<?php endforeach; ?>
 			</ul>
