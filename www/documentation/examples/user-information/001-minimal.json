@@ -1,0 +1,9 @@
+{
+	"__comment": "General user information - minimum fields set",
+		
+	"type": "http://reference.focusnet.eu/schemas/user-information/v0.1",
+	
+	"firstName": "John",
+	"lastName": "Doe",
+	"email": "john.doe@example.org"
+}

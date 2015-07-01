@@ -1,0 +1,39 @@
+{
+	"$schema": "http://json-schema.org/schema#",
+	"id": "http://reference.focusnet.eu/schemas/user-information/v0.1",
+	"title": "User information",
+	"description": "General information about the user",
+	"allOf": [
+			{
+				"$ref": "http://reference.focusnet.eu/schemas/focus-object/v0.1#/definitions/metadata"
+			},
+			{
+				"$ref": "#/definitions/informations"
+			}
+	],
+	"definitions": {
+		"informations": {
+			"properties": {
+				
+				"firstName": {
+					"type": "string"
+				},
+				
+				"lastName": {
+					"type": "string"					
+				},
+				
+				"email": {
+					"type": "string",
+					"format": "email"
+				},
+				
+				"company": {
+					"type": "string"
+				}
+
+			},
+			"required": ["firstName", "lastName", "email"]
+		}
+	}
+}

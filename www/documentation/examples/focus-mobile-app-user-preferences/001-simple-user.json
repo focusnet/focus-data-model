@@ -4,12 +4,7 @@
 	"type": "http://reference.focusnet.eu/schemas/focus-mobile-app-user-preferences/v0.1",
 	
 	"settings": {
-		"language": "fr-CH",
-
-		"notifications": {
-			"vibrate": true,
-			"ring": false
-		}
+		"language": "fr-CH"
 	},
 
 	"bookmarks": {
