@@ -60,7 +60,7 @@ foreach ($files as $f) {
 			'content' => $content,
 			'diagram' => $diagram_path,
 			'examples' => array(), 
-			'dependencies' => $deps
+			'dependencies' => $deps // FIXME must check if local or remote.
 	);
 	$schemas_version_ref[$json->id] = &$schemas[$type_id_no_version]['versions'][$cnt];
 }
