@@ -3,7 +3,7 @@
 
 	"type": "http://reference.focusnet.eu/schemas/focus-data-sample/v0.1",
 
-	"sample": {
+	"data": {
 		
 		"prop1": "a simple string without explicit type setting",
 		

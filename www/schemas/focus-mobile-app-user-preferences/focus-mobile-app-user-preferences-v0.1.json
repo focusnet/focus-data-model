@@ -31,11 +31,11 @@
 					"properties": {
 						"pages": {
 							"type": "array",
-							"items": { "$ref": "#/definitions/bookmark-links" }
+							"items": { "$ref": "#/definitions/bookmark-link" }
 						},
 						"tools": {
 							"type": "array",
-							"items": { "$ref": "#/definitions/bookmark-links" }
+							"items": { "$ref": "#/definitions/bookmark-link" }
 						}
 					}
 				}
@@ -44,7 +44,7 @@
 			"required": ["settings"]
 		},
 		
-		"bookmark-links": {
+		"bookmark-link": {
 			"properties": {
 				"name": {
 					"type": "string"

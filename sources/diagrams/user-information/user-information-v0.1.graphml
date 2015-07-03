@@ -16,29 +16,12 @@
     <data key="d0"/>
     <node id="n0">
       <data key="d6">
-        <y:GenericNode configuration="com.yworks.flowchart.start1">
-          <y:Geometry height="91.0" width="259.9133303762875" x="14.227654683281514" y="496.9910287633323"/>
-          <y:Fill color="#C0C0C0" transparent="false"/>
-          <y:BorderStyle color="#000000" type="line" width="3.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="14" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="36.59375" modelName="custom" textColor="#000000" visible="true" width="35.5341796875" x="112.18957534439375" y="27.203124999999943">data
-{}<y:LabelModel>
-              <y:SmartNodeLabelModel distance="4.0"/>
-            </y:LabelModel>
-            <y:ModelParameter>
-              <y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/>
-            </y:ModelParameter>
-          </y:NodeLabel>
-        </y:GenericNode>
-      </data>
-    </node>
-    <node id="n1">
-      <data key="d6">
         <y:GenericNode configuration="com.yworks.flowchart.process">
-          <y:Geometry height="123.88194479386668" width="518.3780935158597" x="804.7853771813233" y="0.0"/>
+          <y:Geometry height="123.88194479386668" width="518.3780935158597" x="595.5509443709326" y="0.0"/>
           <y:Fill color="#C0C0C0" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="14" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="69.1875" modelName="custom" textColor="#000000" visible="true" width="499.49609375" x="9.44099988292976" y="27.347222396933347">FOCUS Data Sample
-http://reference.focusnet.eu/schemas/focus-data-sample/v0.1
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="14" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="69.1875" modelName="custom" textColor="#000000" visible="true" width="499.49609375" x="9.440999882929873" y="27.347222396933347">User Information
+http://reference.focusnet.eu/schemas/user-information/v0.1
 
 focus-object = http://reference.focusnet.eu/schemas/focus-object/v0.1<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
@@ -50,30 +33,11 @@ focus-object = http://reference.focusnet.eu/schemas/focus-object/v0.1<y:LabelMod
         </y:GenericNode>
       </data>
     </node>
-    <node id="n2">
-      <data key="d6">
-        <y:GenericNode configuration="com.yworks.flowchart.start1">
-          <y:Geometry height="91.0" width="259.9133303762875" x="14.227654683281514" y="647.9910287633322"/>
-          <y:Fill color="#C0C0C0" transparent="false"/>
-          <y:BorderStyle color="#000000" type="line" width="3.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="14" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="69.1875" modelName="custom" textColor="#000000" visible="true" width="276.3916015625" x="-8.239135593106255" y="10.90625">/^[a-z][a-zA-Z0-9_-]+$/
-&lt;focus-object#/definitions/types/any&gt;
-
-[1..n]<y:LabelModel>
-              <y:SmartNodeLabelModel distance="4.0"/>
-            </y:LabelModel>
-            <y:ModelParameter>
-              <y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/>
-            </y:ModelParameter>
-          </y:NodeLabel>
-        </y:GenericNode>
-      </data>
-    </node>
-    <node id="n3">
+    <node id="n1">
       <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="76.5545419847328" width="217.399233716475" x="665.3614767047284" y="203.8819447938667"/>
+          <y:Geometry height="76.5545419847328" width="217.399233716475" x="456.1270438943376" y="203.8819447938667"/>
           <y:Fill color="#C0C0C0" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="14" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="20.296875" modelName="custom" textColor="#000000" visible="true" width="79.0859375" x="69.1566481082375" y="28.128833492366397">Definitions<y:LabelModel>
@@ -87,11 +51,11 @@ focus-object = http://reference.focusnet.eu/schemas/focus-object/v0.1<y:LabelMod
         </y:ShapeNode>
       </data>
     </node>
-    <node id="n4">
+    <node id="n2">
       <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="76.5545419847328" width="217.399233716475" x="1744.3359006439816" y="203.8819447938667"/>
+          <y:Geometry height="76.5545419847328" width="217.399233716475" x="1325.8670350232" y="203.8819447938667"/>
           <y:Fill color="#C0C0C0" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="14" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="20.296875" modelName="custom" textColor="#000000" visible="true" width="63.5478515625" x="76.9256910769875" y="28.128833492366397">Instance<y:LabelModel>
@@ -105,10 +69,10 @@ focus-object = http://reference.focusnet.eu/schemas/focus-object/v0.1<y:LabelMod
         </y:ShapeNode>
       </data>
     </node>
-    <node id="n5">
+    <node id="n3">
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="151.98326717557256" width="151.98326717557256" x="1777.0438839144329" y="340.4364867785995"/>
+          <y:Geometry height="151.98326717557256" width="151.98326717557256" x="1358.5750182936513" y="340.4364867785995"/>
           <y:Fill color="#C0C0C0" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="3.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="14" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="20.296875" modelName="custom" textColor="#000000" visible="true" width="36.306640625" x="57.83831327528628" y="65.84319608778628">allOf<y:LabelModel>
@@ -122,14 +86,14 @@ focus-object = http://reference.focusnet.eu/schemas/focus-object/v0.1<y:LabelMod
         </y:ShapeNode>
       </data>
     </node>
-    <node id="n6">
+    <node id="n4">
       <data key="d6">
         <y:GenericNode configuration="com.yworks.flowchart.start1">
-          <y:Geometry height="91.0" width="259.9133303762875" x="1868.0355175022191" y="572.419753954172"/>
+          <y:Geometry height="91.0" width="259.9133303762875" x="1449.5666518814376" y="572.4197539541722"/>
           <y:Fill color="#C0C0C0" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="3.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="14" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="36.59375" modelName="custom" textColor="#000000" visible="true" width="170.701171875" x="44.60607925064369" y="27.203125">$
-&lt;#definitions/content&gt;<y:LabelModel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="14" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="36.59375" modelName="custom" textColor="#000000" visible="true" width="205.44140625" x="27.23596206314369" y="27.203125">$
+&lt;#definitions/informations&gt;<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>
             <y:ModelParameter>
@@ -139,10 +103,10 @@ focus-object = http://reference.focusnet.eu/schemas/focus-object/v0.1<y:LabelMod
         </y:GenericNode>
       </data>
     </node>
-    <node id="n7">
+    <node id="n5">
       <data key="d6">
         <y:GenericNode configuration="com.yworks.flowchart.start1">
-          <y:Geometry height="91.0" width="259.9133303762875" x="1578.1221871259318" y="572.419753954172"/>
+          <y:Geometry height="91.0" width="259.9133303762875" x="1159.6533215051502" y="572.4197539541722"/>
           <y:Fill color="#C0C0C0" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="3.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="14" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="36.59375" modelName="custom" textColor="#000000" visible="true" width="256.4375" x="1.7379151881436883" y="27.203125">$
@@ -156,13 +120,13 @@ focus-object = http://reference.focusnet.eu/schemas/focus-object/v0.1<y:LabelMod
         </y:GenericNode>
       </data>
     </node>
-    <node id="n8">
+    <node id="n6">
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="76.5545419847328" width="288.3686397428505" x="0.0" y="360.4364867785995"/>
+          <y:Geometry height="76.5545419847328" width="288.3686397428505" x="420.64234088114983" y="340.4364867785995"/>
           <y:Fill color="#C0C0C0" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="14" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="20.296875" modelName="custom" textColor="#000000" visible="true" width="151.95703125" x="68.20580424642526" y="28.128833492366425">#/definitions/content<y:LabelModel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="14" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="20.296875" modelName="custom" textColor="#000000" visible="true" width="186.697265625" x="50.83568705892526" y="28.128833492366425">#/definitions/informations<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>
             <y:ModelParameter>
@@ -173,35 +137,65 @@ focus-object = http://reference.focusnet.eu/schemas/focus-object/v0.1<y:LabelMod
         </y:ShapeNode>
       </data>
     </node>
-    <node id="n9">
+    <node id="n7">
       <data key="d6">
-        <y:ShapeNode>
-          <y:Geometry height="76.5545419847328" width="288.3686397428505" x="810.5292363616281" y="360.4364867785995"/>
+        <y:GenericNode configuration="com.yworks.flowchart.start1">
+          <y:Geometry height="91.0" width="259.9133303762875" x="0.0" y="496.9910287633323"/>
           <y:Fill color="#C0C0C0" transparent="false"/>
-          <y:BorderStyle color="#000000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="14" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="52.890625" modelName="custom" textColor="#000000" visible="true" width="686.376953125" x="-199.00415669107474" y="11.831958492366425">#/definitions/data-acquisition
-
-FIXME - dataref -&gt; refer to previous data-acquisition? need to add id? how is that easier to write?<y:LabelModel>
+          <y:BorderStyle color="#000000" type="line" width="3.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="14" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="36.59375" modelName="custom" textColor="#000000" visible="true" width="72.66015625" x="93.62658706314375" y="27.203124999999943">firstName
+&lt;string&gt;<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>
             <y:ModelParameter>
-              <y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="3.3306690738754696E-16" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/>
+              <y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/>
             </y:ModelParameter>
           </y:NodeLabel>
-          <y:Shape type="hexagon"/>
-        </y:ShapeNode>
+        </y:GenericNode>
+      </data>
+    </node>
+    <node id="n8">
+      <data key="d6">
+        <y:GenericNode configuration="com.yworks.flowchart.start1">
+          <y:Geometry height="91.0" width="259.9133303762875" x="289.9133303762875" y="496.9910287633323"/>
+          <y:Fill color="#C0C0C0" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="3.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="14" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="36.59375" modelName="custom" textColor="#000000" visible="true" width="70.5546875" x="94.67932143814375" y="27.203124999999943">lastName
+&lt;string&gt;<y:LabelModel>
+              <y:SmartNodeLabelModel distance="4.0"/>
+            </y:LabelModel>
+            <y:ModelParameter>
+              <y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/>
+            </y:ModelParameter>
+          </y:NodeLabel>
+        </y:GenericNode>
+      </data>
+    </node>
+    <node id="n9">
+      <data key="d6">
+        <y:GenericNode configuration="com.yworks.flowchart.start1">
+          <y:Geometry height="91.0" width="259.9133303762875" x="579.826660752575" y="496.9910287633323"/>
+          <y:Fill color="#C0C0C0" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="3.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="14" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="36.59375" modelName="custom" textColor="#000000" visible="true" width="110.9755859375" x="74.46887221939369" y="27.203124999999943">email
+&lt;string:email&gt;<y:LabelModel>
+              <y:SmartNodeLabelModel distance="4.0"/>
+            </y:LabelModel>
+            <y:ModelParameter>
+              <y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/>
+            </y:ModelParameter>
+          </y:NodeLabel>
+        </y:GenericNode>
       </data>
     </node>
     <node id="n10">
       <data key="d6">
         <y:GenericNode configuration="com.yworks.flowchart.start1">
-          <y:Geometry height="91.0" width="259.9133303762875" x="361.30492534017526" y="516.9910287633322"/>
+          <y:Geometry height="91.0" width="259.9133303762875" x="869.7399911288626" y="496.9910287633323"/>
           <y:Fill color="#C0C0C0" transparent="false"/>
-          <y:BorderStyle color="#000000" type="line" width="3.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="14" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="69.1875" modelName="custom" textColor="#000000" visible="true" width="374.2412109375" x="-57.163940280606255" y="10.90625">uri
-&lt;string:uri&gt;
-
-may be special URI for local variables?: //localhost/...<y:LabelModel>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="14" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="36.59375" modelName="custom" textColor="#000000" visible="true" width="68.5244140625" x="95.69445815689369" y="27.203124999999943">company
+&lt;string&gt;<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>
             <y:ModelParameter>
@@ -211,74 +205,13 @@ may be special URI for local variables?: //localhost/...<y:LabelModel>
         </y:GenericNode>
       </data>
     </node>
-    <node id="n11">
-      <data key="d6">
-        <y:GenericNode configuration="com.yworks.flowchart.start1">
-          <y:Geometry height="91.0" width="259.9133303762875" x="998.2955263733566" y="516.9910287633322"/>
-          <y:Fill color="#C0C0C0" transparent="false"/>
-          <y:BorderStyle color="#000000" type="line" width="3.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="14" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="36.59375" modelName="custom" textColor="#000000" visible="true" width="115.0634765625" x="72.42492690689369" y="27.203125">selector
-&lt;string:FIXME&gt;<y:LabelModel>
-              <y:SmartNodeLabelModel distance="4.0"/>
-            </y:LabelModel>
-            <y:ModelParameter>
-              <y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/>
-            </y:ModelParameter>
-          </y:NodeLabel>
-        </y:GenericNode>
-      </data>
-    </node>
-    <node id="n12">
-      <data key="d6">
-        <y:GenericNode configuration="com.yworks.flowchart.start1">
-          <y:Geometry height="91.0" width="259.9133303762875" x="708.382195997069" y="516.9910287633322"/>
-          <y:Fill color="#C0C0C0" transparent="false"/>
-          <y:BorderStyle color="#000000" type="line" width="3.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="14" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="36.59375" modelName="custom" textColor="#000000" visible="true" width="90.884765625" x="84.51428237564369" y="27.203125">sourceType
-&lt;string:uri&gt;<y:LabelModel>
-              <y:SmartNodeLabelModel distance="4.0"/>
-            </y:LabelModel>
-            <y:ModelParameter>
-              <y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/>
-            </y:ModelParameter>
-          </y:NodeLabel>
-        </y:GenericNode>
-      </data>
-    </node>
-    <node id="n13">
-      <data key="d6">
-        <y:GenericNode configuration="com.yworks.flowchart.start1">
-          <y:Geometry height="91.0" width="259.9133303762875" x="1288.2088567496442" y="516.9910287633322"/>
-          <y:Fill color="#C0C0C0" transparent="false"/>
-          <y:BorderStyle color="#000000" type="line" width="3.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="14" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="36.59375" modelName="custom" textColor="#000000" visible="true" width="90.884765625" x="84.51428237564369" y="27.203125">targetType
-&lt;string:uri&gt;<y:LabelModel>
-              <y:SmartNodeLabelModel distance="4.0"/>
-            </y:LabelModel>
-            <y:ModelParameter>
-              <y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/>
-            </y:ModelParameter>
-          </y:NodeLabel>
-        </y:GenericNode>
-      </data>
-    </node>
-    <edge id="e0" source="n0" target="n2">
-      <data key="d10">
-        <y:PolyLineEdge>
-          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
-          <y:LineStyle color="#000000" type="line" width="1.0"/>
-          <y:Arrows source="none" target="standard"/>
-          <y:BendStyle smoothed="false"/>
-        </y:PolyLineEdge>
-      </data>
-    </edge>
-    <edge id="e1" source="n1" target="n3">
+    <edge id="e0" source="n0" target="n1">
       <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0">
-            <y:Point x="1063.974423939253" y="163.8819447938667"/>
-            <y:Point x="774.0610935629659" y="163.8819447938667"/>
+            <y:Point x="854.7399911288625" y="163.8819447938667"/>
+            <y:Point x="564.8266607525751" y="163.8819447938667"/>
           </y:Path>
           <y:LineStyle color="#000000" type="dashed" width="1.0"/>
           <y:Arrows source="none" target="standard"/>
@@ -286,13 +219,13 @@ may be special URI for local variables?: //localhost/...<y:LabelModel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e2" source="n1" target="n4">
+    <edge id="e1" source="n0" target="n2">
       <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0">
-            <y:Point x="1063.974423939253" y="163.8819447938667"/>
-            <y:Point x="1853.0355175022191" y="163.8819447938667"/>
+            <y:Point x="854.7399911288625" y="163.8819447938667"/>
+            <y:Point x="1434.5666518814376" y="163.8819447938667"/>
           </y:Path>
           <y:LineStyle color="#000000" type="dashed" width="1.0"/>
           <y:Arrows source="none" target="standard"/>
@@ -300,7 +233,35 @@ may be special URI for local variables?: //localhost/...<y:LabelModel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e3" source="n4" target="n5">
+    <edge id="e2" source="n3" target="n5">
+      <data key="d9"/>
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0">
+            <y:Point x="1434.5666518814376" y="532.4197539541722"/>
+            <y:Point x="1289.6099866932939" y="532.4197539541722"/>
+          </y:Path>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="standard"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e3" source="n3" target="n4">
+      <data key="d9"/>
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0">
+            <y:Point x="1434.5666518814376" y="532.4197539541722"/>
+            <y:Point x="1579.5233170695813" y="532.4197539541722"/>
+          </y:Path>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="standard"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e4" source="n2" target="n3">
       <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
@@ -311,49 +272,7 @@ may be special URI for local variables?: //localhost/...<y:LabelModel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e4" source="n5" target="n7">
-      <data key="d9"/>
-      <data key="d10">
-        <y:PolyLineEdge>
-          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0">
-            <y:Point x="1853.0355175022191" y="532.419753954172"/>
-            <y:Point x="1708.0788523140754" y="532.419753954172"/>
-          </y:Path>
-          <y:LineStyle color="#000000" type="line" width="1.0"/>
-          <y:Arrows source="none" target="standard"/>
-          <y:BendStyle smoothed="false"/>
-        </y:PolyLineEdge>
-      </data>
-    </edge>
-    <edge id="e5" source="n5" target="n6">
-      <data key="d9"/>
-      <data key="d10">
-        <y:PolyLineEdge>
-          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0">
-            <y:Point x="1853.0355175022191" y="532.419753954172"/>
-            <y:Point x="1997.9921826903628" y="532.419753954172"/>
-          </y:Path>
-          <y:LineStyle color="#000000" type="line" width="1.0"/>
-          <y:Arrows source="none" target="standard"/>
-          <y:BendStyle smoothed="false"/>
-        </y:PolyLineEdge>
-      </data>
-    </edge>
-    <edge id="e6" source="n3" target="n8">
-      <data key="d9"/>
-      <data key="d10">
-        <y:PolyLineEdge>
-          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0">
-            <y:Point x="774.0610935629659" y="320.4364867785995"/>
-            <y:Point x="144.18431987142526" y="320.4364867785995"/>
-          </y:Path>
-          <y:LineStyle color="#000000" type="line" width="1.0"/>
-          <y:Arrows source="none" target="standard"/>
-          <y:BendStyle smoothed="false"/>
-        </y:PolyLineEdge>
-      </data>
-    </edge>
-    <edge id="e7" source="n8" target="n0">
+    <edge id="e5" source="n1" target="n6">
       <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
@@ -364,13 +283,13 @@ may be special URI for local variables?: //localhost/...<y:LabelModel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e8" source="n3" target="n9">
+    <edge id="e6" source="n6" target="n7">
       <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0">
-            <y:Point x="774.0610935629659" y="320.4364867785995"/>
-            <y:Point x="954.7135562330534" y="320.4364867785995"/>
+            <y:Point x="564.8266607525751" y="456.99102876333234"/>
+            <y:Point x="129.95666518814375" y="456.99102876333234"/>
           </y:Path>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
           <y:Arrows source="none" target="standard"/>
@@ -378,13 +297,13 @@ may be special URI for local variables?: //localhost/...<y:LabelModel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e9" source="n9" target="n10">
+    <edge id="e7" source="n6" target="n8">
       <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0">
-            <y:Point x="954.7135562330534" y="476.9910287633323"/>
-            <y:Point x="491.261590528319" y="476.9910287633323"/>
+            <y:Point x="564.8266607525751" y="456.99102876333234"/>
+            <y:Point x="419.86999556443124" y="456.99102876333234"/>
           </y:Path>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
           <y:Arrows source="none" target="standard"/>
@@ -392,13 +311,13 @@ may be special URI for local variables?: //localhost/...<y:LabelModel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e10" source="n9" target="n12">
+    <edge id="e8" source="n6" target="n9">
       <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0">
-            <y:Point x="954.7135562330534" y="476.9910287633323"/>
-            <y:Point x="838.3388611852126" y="476.9910287633323"/>
+            <y:Point x="564.8266607525751" y="456.99102876333234"/>
+            <y:Point x="709.7833259407188" y="456.99102876333234"/>
           </y:Path>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
           <y:Arrows source="none" target="standard"/>
@@ -406,27 +325,13 @@ may be special URI for local variables?: //localhost/...<y:LabelModel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e11" source="n9" target="n11">
+    <edge id="e9" source="n6" target="n10">
       <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0">
-            <y:Point x="954.7135562330534" y="476.9910287633323"/>
-            <y:Point x="1128.2521915615002" y="476.9910287633323"/>
-          </y:Path>
-          <y:LineStyle color="#000000" type="line" width="1.0"/>
-          <y:Arrows source="none" target="standard"/>
-          <y:BendStyle smoothed="false"/>
-        </y:PolyLineEdge>
-      </data>
-    </edge>
-    <edge id="e12" source="n9" target="n13">
-      <data key="d9"/>
-      <data key="d10">
-        <y:PolyLineEdge>
-          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0">
-            <y:Point x="954.7135562330534" y="476.9910287633323"/>
-            <y:Point x="1418.1655219377878" y="476.9910287633323"/>
+            <y:Point x="564.8266607525751" y="456.99102876333234"/>
+            <y:Point x="999.6966563170062" y="456.99102876333234"/>
           </y:Path>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
           <y:Arrows source="none" target="standard"/>
