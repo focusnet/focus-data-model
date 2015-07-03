@@ -45,6 +45,8 @@ foreach ($files as $f) {
 		$diagram_path = FALSE;
 	}
 	
+	$deps = array_unique(look_for_refs($json));
+	
 	$type_id_no_version = $matches[1];
 	$type_id_no_version = rtrim($type_id_no_version, '/');
 	
@@ -57,10 +59,10 @@ foreach ($files as $f) {
 			'uri' => $json->id, 
 			'content' => $content,
 			'diagram' => $diagram_path,
-			'examples' => array()
+			'examples' => array(), 
+			'dependencies' => $deps
 	);
 	$schemas_version_ref[$json->id] = &$schemas[$type_id_no_version]['versions'][$cnt];
-	
 }
 
 // retrieve examples
@@ -78,11 +80,24 @@ foreach ($files as $f) {
 	$schemas_version_ref[$json->type]['examples'][] = $f;
 }
 
-// FIXME FIXME FIXME
-// FIXME should inspect content and re-order based on dependencies.
-// FIXME FIXME FIXME
-
-$duh = 'debug';
+// recursively look for $ref-ed schemas
+function look_for_refs($obj)
+{
+	$ret = array();
+	foreach($obj as $k => $o) {
+		if (is_array($o) || is_object($o)) {
+			$ret = array_merge($ret, look_for_refs($o));
+		}
+		else if ($k === '$ref') {
+			$found = preg_replace('/#.*$/', '', $o);
+			if ($found) {
+				$ret[] = $found;
+			}	
+		}
+	}
+	return $ret;	
+}
+$duh = 'ebug';
 
 ?><!DOCTYPE html>
 <html>
@@ -110,7 +125,7 @@ $duh = 'debug';
 			<ul>
 				<?php foreach ($schema['versions'] as $v): ?>
 					<li>
-						<div>
+						<div id="<?php print preg_replace('/[^0-9a-zA-Z_-]/', '-', $v['uri']); ?>">
 							<a href="<?php print $v['uri']; ?>"><?php print $v['uri'];?></a>
 							<?php if ($v['diagram']): ?>
 								&ndash; <a class="diagram" href="<?php print $v['diagram']; ?>">Diagram</a>
@@ -121,6 +136,16 @@ $duh = 'debug';
 							<?php if ($v['examples']): ?>
 								<?php foreach ($v['examples'] as $e): ?>
 									<a href="<?php print $e; ?>"><?php print basename($e); ?></a>
+								<?php endforeach; ?>
+							<?php else: ?>
+								none.
+							<?php endif; ?>
+						</div>
+						<div>
+							Dependencies:
+							<?php if ($v['dependencies']): ?>
+								<?php foreach ($v['dependencies'] as $d): ?>
+									<a href="#<?php print preg_replace('/[^0-9a-zA-Z_-]/', '-', $d); ?>"><?php print $d; ?></a>
 								<?php endforeach; ?>
 							<?php else: ?>
 								none.
