@@ -1,5 +1,12 @@
 {
 	"__comment": "FOCUS Mobile application content - minimal fields set",
 
-	"type": "http://reference.focusnet.eu/schemas/focus-mobile-app-content/v0.1"
+	"type": "http://reference.focusnet.eu/schemas/focus-mobile-app-content-definition/v0.1",
+	
+	"projects": [
+	             {"bbb": "test"},
+	             {"aaa": "test"},
+	             {"aaa": "test"}
+	             ,{"aaa": "test"}
+	             ]
 }

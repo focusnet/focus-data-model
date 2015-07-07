@@ -6,9 +6,182 @@
 	"allOf": [
 			{
 				"$ref": "http://reference.focusnet.eu/schemas/focus-object/v0.1#/definitions/metadata"
+			},
+			{
+				"$ref": "#/definitions/app-content"
 			}
 	],
 	"definitions": {
+
+		"app-content": {
+			"properties": {
+				
+				"projects": {
+					"type": "array",
+					"items": [ { "$ref": "#/definitions/welcome-project" } ],
+					"minItems": 1,
+					"additionalItems": { "$ref": "#/definitions/project"} 
+				}
+				
+			},
+			"required": ["projects"]
+		},
+		
+		"project": {
+			"properties": {
+				"id": {
+					"$ref": "http://reference.focusnet.eu/schemas/focus-object/v0.1#/definitions/types/id"
+				},
+				"iterator": {
+					"$ref": "http://reference.focusnet.eu/schemas/focus-data-sample/v0.1#/definitions/data-acquisition"
+				},
+				"title": {
+					"$ref": "http://reference.focusnet.eu/schemas/focus-data-sample/v0.1#/definitions/contextual-string"
+				},
+				"description": {
+					"$ref": "http://reference.focusnet.eu/schemas/focus-data-sample/v0.1#/definitions/contextual-string"
+				},
+				"order": {
+					"type": "integer"
+				},
+				"widgets": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/widget"
+					},
+					"minItems": 1
+				},
+				"pages": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"pageid": {
+								"$ref": "http://reference.focusnet.eu/schemas/focus-object/v0.1#/definitions/types/id"
+							},
+							"title": {
+								"$ref": "http://reference.focusnet.eu/schemas/focus-data-sample/v0.1#/definitions/contextual-string"
+							},
+							"description": {
+								"$ref": "http://reference.focusnet.eu/schemas/focus-data-sample/v0.1#/definitions/contextual-string"
+							},
+							"widgets": {
+								"type": "array",
+								"items": {
+									"$ref": "#/definitions/widget-reference"
+								},
+								"minItems": 1
+							}
+						},
+						"required": ["pageid", "title", "widgets"]
+					},
+					"minItems": 1
+				},
+				"dashboards": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/page-reference"
+					},
+					"minItems": 1
+				},
+				"tools": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/page-reference"
+					},
+					"minItems": 1
+				},
+				"notifications": {
+					"type": "array",
+					"FIXME___items": {
+						"$___FIXMEref___FIXME": "#/definitions/page-reference"
+					},
+					"minItems": 1
+				}				
+			},
+			"required": ["id", "title"]
+		},
+		
+		"welcome-project": {
+			"allOf": [
+				{
+					"$ref": "#/definitions/project"
+				},
+				{
+					"properties": {
+						"id": {
+							"type": "string",
+							"enum": ["__welcome__"]
+						}
+					},
+					"required": ["id"]
+				}
+			]
+		},
+		
+		"widget": {
+			
+			"any": {},
+			
+			"common": {
+				"properties": {
+					
+					"id": {
+						"$ref": "http://reference.focusnet.eu/schemas/focus-object/v0.1#/definitions/types/id"
+					},
+					
+					"type": {
+						"type": "uri"
+					},
+					
+					"FIXMEiterator": {},
+
+					"params": {
+						"type": "object",
+						"patternProperties": {
+							"^[a-z][a-zA-Z0-9_-]+$": {
+								"$ref": "http://reference.focusnet.eu/schemas/focus-data-sample/v0.1#/definitions/data-acquisition"
+							}
+						},
+						"minProperties": 1,
+						"additionalProperties": false
+					}
+				},
+				"required": ["id", "type"]
+			},
+			
+			"visualize": {},
+			"collect": {}
+			
+		},
+		
+		"page-reference": {
+			"properties": {
+				"pageid": {
+					"$ref": "http://reference.focusnet.eu/schemas/focus-object/v0.1#/definitions/types/id"
+				},
+				"order": {
+					"type": "integer"
+				}
+			},
+			"required": ["pageid"]
+		},
+		
+		"widget-reference": {
+			"properties": {
+				"widgetid": {
+					"$ref": "http://reference.focusnet.eu/schemas/focus-object/v0.1#/definitions/types/id"
+				},
+				"order": {
+					"type": "integer"
+				},
+				"layout": {
+					"FIXME": "FIXME"
+				}
+			},
+			"required": ["widgetid"]
+		}
+		
 		
 	}
 }

@@ -60,6 +60,12 @@
 		},
 		
 		"types": {
+			
+			"id": {
+				"type": "string",
+				"pattern": "^[a-z][a-zA-Z0-9_-]+$"
+			},
+			
 			"any": {
 				"oneOf": [
 					{ "$ref": "#/definitions/types/implicit-string" },

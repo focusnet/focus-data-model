@@ -26,6 +26,58 @@
 				}
 			},
 			"required": ["data"]
+		},
+		
+		"data-acquisition": {
+			"oneOf": [
+				{ 
+					"$ref": "http://reference.focusnet.eu/schemas/focus-object/v0.1#/definitions/types/any" 
+				},
+				{
+					"type": "string",
+					"format": "uri"
+				},
+				{
+					"$ref": "#/definitions/contextual-uri" 
+				}
+			]
+		},
+		
+		"FIXME": "contextual-string -> always flat type in data-acquisition. Iterator -> always non-flat",
+		
+		"contextual-string": {
+			"properties": {
+				"template": {
+					"type": "string"
+				},
+				"placeholders": {
+					"type": "object",
+					"patternProperties": {
+						"^[a-z][a-zA-Z0-9_-]+$": {
+							"$ref": "#/definitions/types/data-acquisition"
+						}
+					},
+					"minProperties": 1,
+					"additionalProperties": false
+				}
+			},
+			"required": ["template", "placeholders"]
+		},
+		
+		
+		"contextual-uri": {
+			"allOf": [
+				{ "$ref": "#/definitions/types/contextual-string" },
+				{
+					"properties": {
+						"template": {
+							"type": "string",
+							"format": "uri"
+						}
+					}
+				}
+			]
 		}
+		
 	}
 }
