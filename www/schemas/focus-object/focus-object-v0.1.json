@@ -68,7 +68,7 @@
 			},
 			
 			"any": {
-				"oneOf": [
+				"anyOf": [
 					{ "$ref": "#/definitions/types/implicit-string" },
 					{ "$ref": "#/definitions/types/string" },
 					{ "$ref": "#/definitions/types/numeric" },

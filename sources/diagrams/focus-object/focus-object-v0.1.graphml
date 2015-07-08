@@ -187,7 +187,7 @@ http://reference.focusnet.eu/schemas/focus-object/v0.1<y:LabelModel>
     <node id="n10">
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="76.5545419847328" width="288.3686397428505" x="4148.843207784472" y="360.4364867785995"/>
+          <y:Geometry height="76.5545419847328" width="288.3686397428505" x="4148.84320778447" y="360.4364867785995"/>
           <y:Fill color="#C0C0C0" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="14" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="20.296875" modelName="custom" textColor="#000000" visible="true" width="136.9248046875" x="75.72191752767503" y="28.128833492366425">#/definitions/types<y:LabelModel>
@@ -309,7 +309,7 @@ http://reference.focusnet.eu/schemas/focus-object/v0.1<y:LabelModel>
           <y:Geometry height="151.98326717557256" width="151.98326717557256" x="2824.8748241738012" y="653.5455707480651"/>
           <y:Fill color="#C0C0C0" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="3.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="14" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="20.296875" modelName="custom" textColor="#000000" visible="true" width="46.0" x="52.991633587786055" y="65.84319608778628">oneOf<y:LabelModel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="14" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="20.296875" modelName="custom" textColor="#000000" visible="true" width="45.685546875" x="53.148860150286055" y="65.84319608778628">anyOf<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>
             <y:ModelParameter>
@@ -508,7 +508,6 @@ http://reference.focusnet.eu/schemas/focus-object/v0.1<y:LabelModel>
       </data>
     </node>
     <node id="n29">
-      <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="76.5545419847328" width="217.399233716475" x="3089.2281783087774" y="203.8819447938667"/>
@@ -526,7 +525,6 @@ http://reference.focusnet.eu/schemas/focus-object/v0.1<y:LabelModel>
       </data>
     </node>
     <node id="n30">
-      <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="76.5545419847328" width="217.399233716475" x="6317.155973475792" y="203.8819447938667"/>
@@ -651,7 +649,7 @@ http://reference.focusnet.eu/schemas/focus-object/v0.1<y:LabelModel>
           <y:Geometry height="76.5545419847328" width="288.3686397428505" x="6107.486950591179" y="516.9910287633322"/>
           <y:Fill color="#C0C0C0" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="14" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="20.296875" modelName="custom" textColor="#000000" visible="true" width="154.41796875" x="66.97533549642503" y="28.128833492366425">#/definitions/types/id<y:LabelModel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="14" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="20.296875" modelName="custom" textColor="#000000" visible="true" width="204.470703125" x="41.94896830892503" y="28.128833492366425">#/definitions/types/identifier<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>
             <y:ModelParameter>
@@ -683,7 +681,7 @@ http://reference.focusnet.eu/schemas/focus-object/v0.1<y:LabelModel>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0">
-            <y:Point x="4293.027527655897" y="476.9910287633323"/>
+            <y:Point x="4293.027527655895" y="476.9910287633323"/>
             <y:Point x="2900.866457761587" y="476.9910287633323"/>
           </y:Path>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
@@ -696,7 +694,7 @@ http://reference.focusnet.eu/schemas/focus-object/v0.1<y:LabelModel>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0">
-            <y:Point x="4293.027527655897" y="476.9910287633323"/>
+            <y:Point x="4293.027527655895" y="476.9910287633323"/>
             <y:Point x="3642.451297076018" y="476.9910287633323"/>
           </y:Path>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
@@ -709,7 +707,7 @@ http://reference.focusnet.eu/schemas/focus-object/v0.1<y:LabelModel>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0">
-            <y:Point x="4293.027527655897" y="476.9910287633323"/>
+            <y:Point x="4293.027527655895" y="476.9910287633323"/>
             <y:Point x="4077.3212926404485" y="476.9910287633323"/>
           </y:Path>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
@@ -722,7 +720,7 @@ http://reference.focusnet.eu/schemas/focus-object/v0.1<y:LabelModel>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0">
-            <y:Point x="4293.027527655897" y="476.9910287633323"/>
+            <y:Point x="4293.027527655895" y="476.9910287633323"/>
             <y:Point x="4657.147953393023" y="476.9910287633323"/>
           </y:Path>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
@@ -735,7 +733,7 @@ http://reference.focusnet.eu/schemas/focus-object/v0.1<y:LabelModel>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0">
-            <y:Point x="4293.027527655897" y="476.9910287633323"/>
+            <y:Point x="4293.027527655895" y="476.9910287633323"/>
             <y:Point x="5236.974614145598" y="476.9910287633323"/>
           </y:Path>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
@@ -748,7 +746,7 @@ http://reference.focusnet.eu/schemas/focus-object/v0.1<y:LabelModel>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0">
-            <y:Point x="4293.027527655897" y="476.9910287633323"/>
+            <y:Point x="4293.027527655895" y="476.9910287633323"/>
             <y:Point x="5816.801274898173" y="476.9910287633323"/>
           </y:Path>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
@@ -1006,7 +1004,6 @@ http://reference.focusnet.eu/schemas/focus-object/v0.1<y:LabelModel>
       </data>
     </edge>
     <edge id="e26" source="n29" target="n9">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0">
@@ -1020,12 +1017,11 @@ http://reference.focusnet.eu/schemas/focus-object/v0.1<y:LabelModel>
       </data>
     </edge>
     <edge id="e27" source="n29" target="n10">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0">
             <y:Point x="3197.9277951670147" y="320.4364867785995"/>
-            <y:Point x="4293.027527655897" y="320.4364867785995"/>
+            <y:Point x="4293.027527655895" y="320.4364867785995"/>
           </y:Path>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
           <y:Arrows source="none" target="standard"/>
@@ -1034,7 +1030,6 @@ http://reference.focusnet.eu/schemas/focus-object/v0.1<y:LabelModel>
       </data>
     </edge>
     <edge id="e28" source="n0" target="n29">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0">
@@ -1048,7 +1043,6 @@ http://reference.focusnet.eu/schemas/focus-object/v0.1<y:LabelModel>
       </data>
     </edge>
     <edge id="e29" source="n0" target="n30">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0">
@@ -1062,7 +1056,6 @@ http://reference.focusnet.eu/schemas/focus-object/v0.1<y:LabelModel>
       </data>
     </edge>
     <edge id="e30" source="n30" target="n31">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1073,7 +1066,6 @@ http://reference.focusnet.eu/schemas/focus-object/v0.1<y:LabelModel>
       </data>
     </edge>
     <edge id="e31" source="n17" target="n32">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0">
@@ -1087,7 +1079,6 @@ http://reference.focusnet.eu/schemas/focus-object/v0.1<y:LabelModel>
       </data>
     </edge>
     <edge id="e32" source="n17" target="n33">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0">
@@ -1101,7 +1092,6 @@ http://reference.focusnet.eu/schemas/focus-object/v0.1<y:LabelModel>
       </data>
     </edge>
     <edge id="e33" source="n17" target="n34">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0">
@@ -1115,7 +1105,6 @@ http://reference.focusnet.eu/schemas/focus-object/v0.1<y:LabelModel>
       </data>
     </edge>
     <edge id="e34" source="n17" target="n35">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0">
@@ -1129,7 +1118,6 @@ http://reference.focusnet.eu/schemas/focus-object/v0.1<y:LabelModel>
       </data>
     </edge>
     <edge id="e35" source="n17" target="n36">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0">
@@ -1143,11 +1131,10 @@ http://reference.focusnet.eu/schemas/focus-object/v0.1<y:LabelModel>
       </data>
     </edge>
     <edge id="e36" source="n10" target="n37">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0">
-            <y:Point x="4293.027527655897" y="476.9910287633323"/>
+            <y:Point x="4293.027527655895" y="476.9910287633323"/>
             <y:Point x="6251.671270462604" y="476.9910287633323"/>
           </y:Path>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
@@ -1157,7 +1144,6 @@ http://reference.focusnet.eu/schemas/focus-object/v0.1<y:LabelModel>
       </data>
     </edge>
     <edge id="e37" source="n37" target="n38">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
