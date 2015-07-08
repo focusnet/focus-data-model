@@ -11,8 +11,10 @@
 				"$ref": "#/definitions/content"
 			}
 	],
+	
 	"definitions": {
 		"content": {
+			"type": "object",
 			"properties": {
 				"data": {
 					"type": "object",
@@ -29,13 +31,13 @@
 		},
 		
 		"data-acquisition": {
-			"oneOf": [
-				{ 
-					"$ref": "http://reference.focusnet.eu/schemas/focus-object/v0.1#/definitions/types/any" 
+			"anyOf": [
+				{
+					"type": "string", 
+					"format": "uri"
 				},
 				{
-					"type": "string",
-					"format": "uri"
+					"$ref": "http://reference.focusnet.eu/schemas/focus-object/v0.1#/definitions/types/any"
 				},
 				{
 					"$ref": "#/definitions/contextual-uri" 
@@ -43,41 +45,79 @@
 			]
 		},
 		
-		"FIXME": "contextual-string -> always flat type in data-acquisition. Iterator -> always non-flat",
+		"data-acquisition-level-2": {
+			"__comment": "No contextual (iterative) string retrieval at this step",
+			"anyOf": [
+				{
+					"type": "string", 
+					"format": "uri"
+				},
+				{
+					"$ref": "http://reference.focusnet.eu/schemas/focus-object/v0.1#/definitions/types/any"
+				}
+			]
+		},
 		
 		"contextual-string": {
-			"properties": {
-				"template": {
-					"type": "string"
-				},
-				"placeholders": {
+			"oneOf": [
+				{
 					"type": "object",
-					"patternProperties": {
-						"^[a-z][a-zA-Z0-9_-]+$": {
-							"$ref": "#/definitions/types/data-acquisition"
+				
+					"properties": {
+						"template": {
+							"type": "string"
+						},
+						"placeholders": {
+							"type": "object",
+							"patternProperties": {
+								"^[a-z][a-zA-Z0-9_-]+$": {
+									"$ref": "#/definitions/data-acquisition-level-2"
+								}
+							},
+							"minProperties": 1,
+							"additionalProperties": false
 						}
 					},
-					"minProperties": 1,
+					"required": ["template", "placeholders"],
 					"additionalProperties": false
+				},
+				{
+					"type": "string"
 				}
-			},
-			"required": ["template", "placeholders"]
+			]
 		},
 		
 		
 		"contextual-uri": {
-			"allOf": [
-				{ "$ref": "#/definitions/types/contextual-string" },
+			"oneOf": [
 				{
+					"type": "object",
+				
 					"properties": {
 						"template": {
-							"type": "string",
-							"format": "uri"
+							"type": "string"
+						},
+						"placeholders": {
+							"type": "object",
+							"patternProperties": {
+								"^[a-z][a-zA-Z0-9_-]+$": {
+									"$ref": "#/definitions/data-acquisition-level-2"
+								}
+							},
+							"minProperties": 1,
+							"additionalProperties": false
 						}
-					}
+					},
+					"required": ["template", "placeholders"],
+					"additionalProperties": false
+				},
+				{
+					"type": "string",
+					"format": "uri"
 				}
 			]
 		}
+		
 		
 	}
 }

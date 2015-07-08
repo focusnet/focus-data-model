@@ -1,0 +1,76 @@
+{
+	"__comment": "FOCUS Mobile application content - test 001",
+
+	"type": "http://reference.focusnet.eu/schemas/focus-mobile-app-content-definition/v0.1",
+
+	"projects": [
+		
+		{
+			"guid": "__welcome__",
+			"iterator": null,
+			"title": "Welcome screen",
+			"description": "This project is mandatory and is identified by its id '__welcome__'. It cannot define an iterator. The order is not relevant."
+		},
+		
+		{
+			"guid": "unique-project-identifier",
+			"iterator": "an iterator that will be used for creating projects based on this project model.",
+			"title": "The title of the project",
+			"description": "A friendly description of the current project",
+			"order": 5,
+			
+			"widgets": [
+				{
+					"guid": "test-simple-viz",
+					"type": "#/definitions/widget/test-widget-type",
+					"params": {
+						"label": "A label",
+						"text": "An example of text to be inserted into the widget",
+						"data": "http://server.example.org/data/my-machine/123456#engine-data-example"
+					}
+				}
+			],
+			
+			"pages": [
+				{
+					"guid": "summary-page",
+					"title": "A page title",
+					"description": "The friendly description of the page",
+					"widgets": [
+						{
+							"widgetid": "test-simple-viz",
+							"order": 2,
+							"layout": {
+								"TODO": "TODO"
+							}
+						},
+						{
+							"widgetid": "test-simple-viz",
+							"order": 1,
+							"layout": {
+								"TODO": "TODO"
+							}
+						}
+					]
+				}
+			],
+			
+			"dashboards": [
+				{
+					"pageid": "summary-page",
+					"order": 1
+				}
+			],
+			
+			"tools": [
+				{
+					"pageid": "summary-page",
+					"order": 1
+				}
+			],
+			
+			"notifications": [{}]	
+		}
+		
+	]
+}

@@ -14,6 +14,7 @@
 	"definitions": {
 
 		"app-content": {
+			"type": "object",
 			"properties": {
 				
 				"projects": {
@@ -27,13 +28,14 @@
 			"required": ["projects"]
 		},
 		
-		"project": {
+		"project-common": {
+			"type": "object",
 			"properties": {
-				"id": {
-					"$ref": "http://reference.focusnet.eu/schemas/focus-object/v0.1#/definitions/types/id"
+				"guid": {
+					"type": "string"
 				},
 				"iterator": {
-					"$ref": "http://reference.focusnet.eu/schemas/focus-data-sample/v0.1#/definitions/data-acquisition"
+					"type": ["null", "string"]
 				},
 				"title": {
 					"$ref": "http://reference.focusnet.eu/schemas/focus-data-sample/v0.1#/definitions/contextual-string"
@@ -47,7 +49,7 @@
 				"widgets": {
 					"type": "array",
 					"items": {
-						"$ref": "#/definitions/widget"
+						"$ref": "#/definitions/widget/any"
 					},
 					"minItems": 1
 				},
@@ -56,8 +58,8 @@
 					"items": {
 						"type": "object",
 						"properties": {
-							"pageid": {
-								"$ref": "http://reference.focusnet.eu/schemas/focus-object/v0.1#/definitions/types/id"
+							"guid": {
+								"$ref": "http://reference.focusnet.eu/schemas/focus-object/v0.1#/definitions/types/identifier"
 							},
 							"title": {
 								"$ref": "http://reference.focusnet.eu/schemas/focus-data-sample/v0.1#/definitions/contextual-string"
@@ -73,7 +75,7 @@
 								"minItems": 1
 							}
 						},
-						"required": ["pageid", "title", "widgets"]
+						"required": ["guid", "title", "widgets"]
 					},
 					"minItems": 1
 				},
@@ -99,39 +101,72 @@
 					"minItems": 1
 				}				
 			},
-			"required": ["id", "title"]
+			"required": ["guid", "title"],
+			"additionalProperties": false
 		},
 		
 		"welcome-project": {
 			"allOf": [
 				{
-					"$ref": "#/definitions/project"
+					"$ref": "#/definitions/project-common"
 				},
 				{
+					"type": "object",
 					"properties": {
-						"id": {
+						"guid": {
 							"type": "string",
 							"enum": ["__welcome__"]
+						},
+						"iterator": {
+							"type": "null"
 						}
 					},
-					"required": ["id"]
+					"required": ["guid"]
 				}
 			]
 		},
 		
+		"project": {
+			"allOf": [
+				{
+					"$ref": "#/definitions/project-common"
+				},
+				{
+					"type": "object",
+					"properties": {
+						"guid": {
+							"$ref": "http://reference.focusnet.eu/schemas/focus-object/v0.1#/definitions/types/identifier"
+						},
+						"iterator": {
+							"$ref": "http://reference.focusnet.eu/schemas/focus-data-sample/v0.1#/definitions/data-acquisition"
+						}
+					},
+					"required": ["guid"]
+				}
+			]
+		},
+		
+		
 		"widget": {
 			
-			"any": {},
+			"any": {
+				"anyOf": [
+					{
+						"$ref": "#/definitions/widget/common"
+					}
+				]
+			},
 			
 			"common": {
+				"type": "object",
 				"properties": {
 					
-					"id": {
-						"$ref": "http://reference.focusnet.eu/schemas/focus-object/v0.1#/definitions/types/id"
+					"guid": {
+						"$ref": "http://reference.focusnet.eu/schemas/focus-object/v0.1#/definitions/types/identifier"
 					},
 					
 					"type": {
-						"type": "uri"
+						"type": "string"
 					},
 					
 					"FIXMEiterator": {},
@@ -147,7 +182,7 @@
 						"additionalProperties": false
 					}
 				},
-				"required": ["id", "type"]
+				"required": ["guid", "type"]
 			},
 			
 			"visualize": {},
@@ -156,9 +191,10 @@
 		},
 		
 		"page-reference": {
+			"type": "object",
 			"properties": {
 				"pageid": {
-					"$ref": "http://reference.focusnet.eu/schemas/focus-object/v0.1#/definitions/types/id"
+					"$ref": "http://reference.focusnet.eu/schemas/focus-object/v0.1#/definitions/types/identifier"
 				},
 				"order": {
 					"type": "integer"
@@ -168,9 +204,10 @@
 		},
 		
 		"widget-reference": {
+			"type": "object",
 			"properties": {
 				"widgetid": {
-					"$ref": "http://reference.focusnet.eu/schemas/focus-object/v0.1#/definitions/types/id"
+					"$ref": "http://reference.focusnet.eu/schemas/focus-object/v0.1#/definitions/types/identifier"
 				},
 				"order": {
 					"type": "integer"

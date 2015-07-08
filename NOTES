@@ -1,0 +1,21 @@
+Random thoughts.
+~~~~~~~~~~~~~~~~
+
+
+iterator: accept only arrays
+contextual-string/uri: only accept non-arrays
+		
+		
+in json schemas, "id" is used to set an "anchor", so we cannot use it as property name.
+	-> we use "guid" instead (Globally Unique Identifier)
+	
+RefResolver::maxDepth -> 7 is a bit too short. increase. 
+	however we must watch performances. Perhaps flatten schemas at some point?
+	
+how to merge contextual string and URI  definitions ?
+
+project: forbid additional values?
+
+iterator: accepts integers?????
+
+we will need a type for table data

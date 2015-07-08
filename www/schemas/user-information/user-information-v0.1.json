@@ -13,6 +13,8 @@
 	],
 	"definitions": {
 		"informations": {
+			
+			"type": "object",
 			"properties": {
 				
 				"firstName": {

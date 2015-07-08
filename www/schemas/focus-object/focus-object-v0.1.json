@@ -9,6 +9,7 @@
 	"definitions": {
 		
 		"metadata": {
+			"type": "object",
 			"properties": {
 				"type": {
 					"description": "Object type (a sub-type of FOCUSObject).",
@@ -61,7 +62,7 @@
 		
 		"types": {
 			
-			"id": {
+			"identifier": {
 				"type": "string",
 				"pattern": "^[a-z][a-zA-Z0-9_-]+$"
 			},
