@@ -1,7 +1,7 @@
 {
-	"__comment": "FOCUS Mobile application content - test 001",
+	"__comment": "FOCUS Mobile application content - test 002",
 
-	"type": "http://reference.focusnet.eu/schemas/focus-mobile-app-content-definition/v0.1",
+	"type": "http://reference.focusnet.eu/schemas/focus-mobile-app-content-definition/v0.2",
 
 	"projects": [
 		
