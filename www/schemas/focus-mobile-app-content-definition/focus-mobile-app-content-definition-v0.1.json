@@ -1,6 +1,6 @@
 {
 	"$schema": "http://json-schema.org/schema#",
-	"id": "http://reference.focusnet.eu/schemas/focus-mobile-app-content-definition/v0.1",
+	"id": "http://reference.focusnet.eu/schemas/focus-mobile-app-content-definition/v0.2",
 	"title": "FOCUS Mobile application - Content definition",
 	"description": "Content definition of the mobile application",
 	"allOf": [
