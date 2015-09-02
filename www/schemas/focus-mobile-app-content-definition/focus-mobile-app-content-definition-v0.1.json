@@ -213,7 +213,14 @@
 					"type": "integer"
 				},
 				"layout": {
-					"FIXME": "FIXME"
+					"type": "object",
+					"properties": {
+						"width": {
+							"type": "string",
+							"enum": ["1of4", "2of4", "3of4", "4of4"],
+							"default": "4of4"
+						}
+					}
 				}
 			},
 			"required": ["widgetid"]

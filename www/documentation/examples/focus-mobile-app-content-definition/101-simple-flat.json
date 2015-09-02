@@ -47,17 +47,11 @@
 					"widgets": [
 						{
 							"widgetid": "a-sample-widget-456",
-							"order": 2,
-							"layout": {
-								"TODO": "TODO"
-							}
+							"order": 2
 						},
 						{
 							"widgetid": "a-sample-widget-456",
-							"order": 1,
-							"layout": {
-								"TODO": "TODO"
-							}
+							"order": 1
 						}
 					]
 				},
@@ -69,17 +63,11 @@
 					"widgets": [
 						{
 							"widgetid": "a-sample-widget-456",
-							"order": 2,
-							"layout": {
-								"TODO": "TODO"
-							}
+							"order": 2
 						},
 						{
 							"widgetid": "a-sample-widget-789",
-							"order": 1,
-							"layout": {
-								"TODO": "TODO"
-							}
+							"order": 1
 						}
 					]
 				}

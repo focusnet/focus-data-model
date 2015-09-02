@@ -1,0 +1,257 @@
+{
+	"__comment": "FOCUS Mobile application content - test 001",
+
+	"type": "http://reference.focusnet.eu/schemas/focus-mobile-app-content-definition/v0.1",
+
+	"projects": [
+		
+		{
+			"guid": "__welcome__",
+			"iterator": null,
+			"title": "Welcome screen",
+			"description": "This project is mandatory and is identified by its id '__welcome__'. It cannot define an iterator. The order is not relevant."
+		},
+		
+		{
+			"guid": "my-project-123",
+			"title": "The title of the project 123",
+			"description": "A friendly description of the current project",
+			"order": 5,
+			
+			"widgets": [
+				{
+					"guid": "a-sample-widget-456",
+					"type": "#/definitions/widget/test-widget-type",
+					"params": {
+						"text": "Some text because this is a text widget (but the type is not correct)"
+					}
+				},
+				{
+					"guid": "a-sample-widget-789",
+					"type": "#/definitions/widget/test-widget-type",
+					"params": {
+						"text": "Some text because this is a text widget (but the type is not correct)"
+					}
+				}
+			],
+			
+			"pages": [
+				{
+					"guid": "a-simple-page-1",
+					"title": "4of4 | 4of4 (without explicit layout, default is 4of4)",
+					"description": "The friendly description of the page",
+					"widgets": [
+						{
+							"widgetid": "a-sample-widget-456",
+							"order": 2
+						},
+						{
+							"widgetid": "a-sample-widget-789",
+							"order": 1
+						}
+					]
+				},
+				
+				{
+					"guid": "a-simple-page-2",
+					"title": "1of4 1of4",
+					"description": "The friendly description of the page",
+					"widgets": [
+						{
+							"widgetid": "a-sample-widget-456",
+							"layout": {
+								"width": "1of4"
+							}
+						},
+						{
+							"widgetid": "a-sample-widget-789",
+							"layout": {
+								"width": "1of4"
+							}
+						}
+					]
+				},
+				
+				{
+					"guid": "a-simple-page-3",
+					"title": "2of4 1of4",
+					"description": "The friendly description of the page",
+					"widgets": [
+						{
+							"widgetid": "a-sample-widget-456",
+							"layout": {
+								"width": "2of4"
+							}
+						},
+						{
+							"widgetid": "a-sample-widget-789",
+							"layout": {
+								"width": "1of4"
+							}
+						}
+					]
+				},
+				
+				{
+					"guid": "a-simple-page-4",
+					"title": "1of4 2of4 1of4",
+					"description": "The friendly description of the page",
+					"widgets": [
+						{
+							"widgetid": "a-sample-widget-456",
+							"layout": {
+								"width": "1of4"
+							}
+						},
+						{
+							"widgetid": "a-sample-widget-456",
+							"layout": {
+								"width": "2of4"
+							}
+						},
+						{
+							"widgetid": "a-sample-widget-789",
+							"layout": {
+								"width": "1of4"
+							}
+						}
+					]
+				},
+				
+				{
+					"guid": "a-simple-page-5",
+					"title": "2of4 1of4 1of4 | 4of4 (implicit) | 4of4 (explicit) | 2of4",
+					"description": "The friendly description of the page",
+					"widgets": [
+						{
+							"widgetid": "a-sample-widget-456",
+							"layout": {
+								"width": "2of4"
+							}
+						},
+						{
+							"widgetid": "a-sample-widget-789",
+							"layout": {
+								"width": "1of4"
+							}
+						},
+						{
+							"widgetid": "a-sample-widget-789",
+							"layout": {
+								"width": "1of4"
+							}
+						},
+						{
+							"widgetid": "a-sample-widget-789"
+						},
+						{
+							"widgetid": "a-sample-widget-789",
+							"layout": {
+								"width": "4of4"
+							}
+						},
+						{
+							"widgetid": "a-sample-widget-789",
+							"layout": {
+								"width": "2of4"
+							}
+						}
+					]
+				},
+				
+				{
+					"guid": "a-simple-page-6",
+					"title": "1of4 3of4 | 1of4 2of4 1of4 | 2of4 | 3of4 | 3of4 1of4",
+					"description": "The friendly description of the page",
+					"widgets": [
+						{
+							"widgetid": "a-sample-widget-456",
+							"layout": {
+								"width": "1of4"
+							}
+						},
+						{
+							"widgetid": "a-sample-widget-789",
+							"layout": {
+								"width": "3of4"
+							}
+						},
+						{
+							"widgetid": "a-sample-widget-456",
+							"layout": {
+								"width": "1of4"
+							}
+						},
+						{
+							"widgetid": "a-sample-widget-456",
+							"layout": {
+								"width": "2of4"
+							}
+						},
+						{
+							"widgetid": "a-sample-widget-456",
+							"layout": {
+								"width": "1of4"
+							}
+						},
+						{
+							"widgetid": "a-sample-widget-456",
+							"layout": {
+								"width": "2of4"
+							}
+						},
+						{
+							"widgetid": "a-sample-widget-456",
+							"layout": {
+								"width": "3of4"
+							}
+						},
+						{
+							"widgetid": "a-sample-widget-456",
+							"layout": {
+								"width": "3of4"
+							}
+						},
+						{
+							"widgetid": "a-sample-widget-456",
+							"layout": {
+								"width": "1of4"
+							}
+						}
+					]
+				}
+			],
+			
+			"dashboards": [
+				{
+					"pageid": "a-simple-page-1"
+				},
+				{
+					"pageid": "a-simple-page-2"
+				},
+				{
+					"pageid": "a-simple-page-3"
+				},
+				{
+					"pageid": "a-simple-page-4"
+				},
+				{
+					"pageid": "a-simple-page-5"
+				},
+				{
+					"pageid": "a-simple-page-6"
+				}
+			],
+			
+			"tools": [
+				{
+					"pageid": "a-simple-page-2",
+					"order": 1
+				}
+			],
+			
+			"notifications": [{}]	
+		}
+		
+	]
+}
