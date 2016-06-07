@@ -1,11 +1,11 @@
 {
 	"$schema": "http://json-schema.org/schema#",
-	"id": "http://reference.focusnet.eu/schemas/focus-mobile-app-content-definition/v0.2",
+	"id": "http://reference.focusnet.eu/schemas/focus-mobile-app-content-definition/v1.0",
 	"title": "FOCUS Mobile application - Content definition",
 	"description": "Content definition of the mobile application",
 	"allOf": [
 			{
-				"$ref": "http://reference.focusnet.eu/schemas/focus-object/v0.1#/definitions/metadata"
+				"$ref": "http://reference.focusnet.eu/schemas/focus-object/v1.0#/definitions/metadata"
 			},
 			{
 				"$ref": "#/definitions/app-content"
@@ -38,13 +38,10 @@
 					"type": ["null", "string"]
 				},
 				"title": {
-					"$ref": "http://reference.focusnet.eu/schemas/focus-data-sample/v0.1#/definitions/contextual-string"
+					"$ref": "http://reference.focusnet.eu/schemas/focus-data-sample/v1.0#/definitions/contextual-string"
 				},
 				"description": {
-					"$ref": "http://reference.focusnet.eu/schemas/focus-data-sample/v0.1#/definitions/contextual-string"
-				},
-				"order": {
-					"type": "integer"
+					"$ref": "http://reference.focusnet.eu/schemas/focus-data-sample/v1.0#/definitions/contextual-string"
 				},
 				"widgets": {
 					"type": "array",
@@ -59,13 +56,13 @@
 						"type": "object",
 						"properties": {
 							"guid": {
-								"$ref": "http://reference.focusnet.eu/schemas/focus-object/v0.1#/definitions/types/identifier"
+								"$ref": "http://reference.focusnet.eu/schemas/focus-object/v1.0#/definitions/types/identifier"
 							},
 							"title": {
-								"$ref": "http://reference.focusnet.eu/schemas/focus-data-sample/v0.1#/definitions/contextual-string"
+								"$ref": "http://reference.focusnet.eu/schemas/focus-data-sample/v1.0#/definitions/contextual-string"
 							},
 							"description": {
-								"$ref": "http://reference.focusnet.eu/schemas/focus-data-sample/v0.1#/definitions/contextual-string"
+								"$ref": "http://reference.focusnet.eu/schemas/focus-data-sample/v1.0#/definitions/contextual-string"
 							},
 							"widgets": {
 								"type": "array",
@@ -135,10 +132,10 @@
 					"type": "object",
 					"properties": {
 						"guid": {
-							"$ref": "http://reference.focusnet.eu/schemas/focus-object/v0.1#/definitions/types/identifier"
+							"$ref": "http://reference.focusnet.eu/schemas/focus-object/v1.0#/definitions/types/identifier"
 						},
 						"iterator": {
-							"$ref": "http://reference.focusnet.eu/schemas/focus-data-sample/v0.1#/definitions/data-acquisition"
+							"$ref": "http://reference.focusnet.eu/schemas/focus-data-sample/v1.0#/definitions/data-acquisition"
 						}
 					},
 					"required": ["guid"]
@@ -162,7 +159,7 @@
 				"properties": {
 					
 					"guid": {
-						"$ref": "http://reference.focusnet.eu/schemas/focus-object/v0.1#/definitions/types/identifier"
+						"$ref": "http://reference.focusnet.eu/schemas/focus-object/v1.0#/definitions/types/identifier"
 					},
 					
 					"type": {
@@ -175,7 +172,7 @@
 						"type": "object",
 						"patternProperties": {
 							"^[a-z][a-zA-Z0-9_-]+$": {
-								"$ref": "http://reference.focusnet.eu/schemas/focus-data-sample/v0.1#/definitions/data-acquisition"
+								"$ref": "http://reference.focusnet.eu/schemas/focus-data-sample/v1.0#/definitions/data-acquisition"
 							}
 						},
 						"minProperties": 1,
@@ -194,10 +191,7 @@
 			"type": "object",
 			"properties": {
 				"pageid": {
-					"$ref": "http://reference.focusnet.eu/schemas/focus-object/v0.1#/definitions/types/identifier"
-				},
-				"order": {
-					"type": "integer"
+					"$ref": "http://reference.focusnet.eu/schemas/focus-object/v1.0#/definitions/types/identifier"
 				}
 			},
 			"required": ["pageid"]
@@ -207,10 +201,7 @@
 			"type": "object",
 			"properties": {
 				"widgetid": {
-					"$ref": "http://reference.focusnet.eu/schemas/focus-object/v0.1#/definitions/types/identifier"
-				},
-				"order": {
-					"type": "integer"
+					"$ref": "http://reference.focusnet.eu/schemas/focus-object/v1.0#/definitions/types/identifier"
 				},
 				"layout": {
 					"type": "object",

@@ -1,7 +1,7 @@
 {
 	"$schema": "http://json-schema.org/schema#",
 	"title": "Basic FOCUS Object",
-	"id": "http://reference.focusnet.eu/schemas/focus-object/v0.1",
+	"id": "http://reference.focusnet.eu/schemas/focus-object/v1.0",
 	"description": "Base FOCUS object: all objects stored in the resource server must at least match this template.",
 	"allOf": [ 
 		{ "$ref": "#/definitions/metadata" }
@@ -69,7 +69,6 @@
 			
 			"any": {
 				"anyOf": [
-					{ "$ref": "#/definitions/types/implicit-string" },
 					{ "$ref": "#/definitions/types/string" },
 					{ "$ref": "#/definitions/types/numeric" },
 					{ "$ref": "#/definitions/types/array-string" },
@@ -77,70 +76,26 @@
 				]
 			},
 			
-			"implicit-string": {
+			"string": {
 				"type": "string"
 			},
 			
-			"string": {
-				"type": "object",
-				"properties": {
-					"type": {
-						"type": "string",
-						"enum": ["string"]
-					},
-					"value": {
-						"type": "string"
-					}
-				},
-				"required": [ "value" ]
-			},
-			
 			"numeric": {
-				"type": "object",
-				"properties": {
-					"type": {
-						"type": "string",
-						"enum": ["numeric"]
-					},
-					"value": {
-						"type": "number"
-					}
-				},
-				"required": [ "type", "value" ]
+				"type": "number"
 			},
 			
 			"array-string": {
-				"type": "object",
-				"properties": {
-					"type": {
-						"type": "string",
-						"enum": ["array-string"]
-					},
-					"value": {
-						"type": "array",
-						"items": {
-							"type": "string"
-						}
-					}
-				},
-				"required": [ "type", "value" ]
+				"type": "array",
+				"items": {
+					"type": "string"
+				}
 			},
 			
 			"array-numeric": {
-				"type": "object",
-				"properties": {
-					"type": {
-						"type": "string",
-						"enum": ["array-numeric"]
-					},
-					"value": {
-						"type": "array",
-						"items": {
-							"type": "number"
-						}
-					}
-				},
-				"required": [ "type", "value" ]
+				"type": "array",
+				"items": {
+					"type": "number"
+				}
 			}
 			
 		}

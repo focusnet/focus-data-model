@@ -1,11 +1,11 @@
 {
 	"$schema": "http://json-schema.org/schema#",
-	"id": "http://reference.focusnet.eu/schemas/user-information/v0.1",
+	"id": "http://reference.focusnet.eu/schemas/focus-user-information/v1.0",
 	"title": "User information",
 	"description": "General information about the user",
 	"allOf": [
 			{
-				"$ref": "http://reference.focusnet.eu/schemas/focus-object/v0.1#/definitions/metadata"
+				"$ref": "http://reference.focusnet.eu/schemas/focus-object/v1.0#/definitions/metadata"
 			},
 			{
 				"$ref": "#/definitions/informations"

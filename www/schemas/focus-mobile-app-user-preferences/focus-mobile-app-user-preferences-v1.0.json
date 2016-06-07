@@ -1,11 +1,11 @@
 {
 	"$schema": "http://json-schema.org/schema#",
-	"id": "http://reference.focusnet.eu/schemas/focus-mobile-app-user-preferences/v0.1",
+	"id": "http://reference.focusnet.eu/schemas/focus-mobile-app-user-preferences/v1.0",
 	"title": "FOCUS Mobile application - User preferences",
 	"description": "The different user-defined preferences of the FOCUS Mobile application.",
 	"allOf": [
 			{
-				"$ref": "http://reference.focusnet.eu/schemas/focus-object/v0.1#/definitions/metadata"
+				"$ref": "http://reference.focusnet.eu/schemas/focus-object/v1.0#/definitions/metadata"
 			},
 			{
 				"$ref": "#/definitions/preferences"
@@ -16,18 +16,6 @@
 			
 			"type": "object",
 			"properties": {
-				
-				"settings": {
-					"type": "object",
-					"properties": {
-						"language": {
-							"type": "string",
-							"pattern": "^[a-z]{2}(-[A-Z]{2})?$"
-						}
-					},
-					"required": ["language"]
-				},
-				
 				"bookmarks": {
 					"type": "object",
 					"properties": {
@@ -42,8 +30,7 @@
 					}
 				}
 
-			},
-			"required": ["settings"]
+			}
 		},
 		
 		"bookmark-link": {
@@ -53,11 +40,7 @@
 					"type": "string"
 				},
 				"path": {
-					"type": "string",
-					"FIXME": "add a pattern?"
-				},
-				"order": {
-					"type": "integer"
+					"type": "string"
 				}
 			},
 			"required": ["name", "path"]
