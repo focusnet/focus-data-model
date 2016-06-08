@@ -16,7 +16,9 @@
 		"app-content": {
 			"type": "object",
 			"properties": {
-				
+				"title": {
+					"type": "string"
+				},
 				"projects": {
 					"type": "array",
 					"items": [ { "$ref": "#/definitions/welcome-project" } ],
