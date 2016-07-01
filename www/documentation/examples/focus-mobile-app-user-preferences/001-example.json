@@ -1,0 +1,28 @@
+{
+    "bookmarks": {
+        "pages": [
+            {
+                "name": "To be discussed at the office",
+                "path": "FOCUS|project-in-forest[https:\/\/obfuscated-path\/forest_data\/19ed510c333311e6ac453c15c2ba510c]|DASHBOARD|project-general-information"
+            },
+            {
+                "name": "Lindberg MOTI sample plots",
+                "path": "FOCUS|project-in-forest[https:\/\/obfuscated-path\/forest_data\/19ed510c333311e6ac453c15c2ba510c]"
+            }
+        ],
+        "tools": [
+            {
+                "name": "MOTI for Lindberg forest",
+                "path": "project-in-forest[https:\/\/obfuscated-path\/forest_data\/19ed510c333311e6ac453c15c2ba510c]|TOOL|moti"
+            }
+        ]
+    },
+    "creationDateTime": "2016-06-17T05:45:51+00:00",
+    "editionDateTime": "2016-06-19T23:08:16+00:00",
+    "editor": "123",
+    "owner": "123",
+    "type": "http:\/\/reference.focusnet.eu\/schemas\/focus-mobile-app-user-preferences\/v1.0",
+    "url": "http:\/\/obfuscated-path\/resources-server\/data\/focus-user\/user-4c786c548b0b0727\/focus-mobile-app-preferences\/pilot-case-1",
+    "active": true,
+    "version": 35
+}

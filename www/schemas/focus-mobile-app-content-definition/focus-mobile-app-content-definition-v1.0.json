@@ -3,6 +3,9 @@
 	"id": "http://reference.focusnet.eu/schemas/focus-mobile-app-content-definition/v1.0",
 	"title": "FOCUS Mobile application - Content definition",
 	"description": "Content definition of the mobile application",
+
+	"__comment": "IMPORTANT: This schema is incomplete. Read the sources of FOCUS Mobile and especially the following package: eu.focusnet.app.model.gson. We use GSON to deserialize the application content, so there is a direct match between the classes in the Java app and the application content definition",
+
 	"allOf": [
 			{
 				"$ref": "http://reference.focusnet.eu/schemas/focus-object/v1.0#/definitions/metadata"
@@ -19,31 +22,55 @@
 				"title": {
 					"type": "string"
 				},
+				"language": {
+					"type": "string",
+					"pattern": "^[a-z]{2}(_[A-Z]{2})?$"
+				},
+				"data": { 
+					"type": "object", 
+					"__FIXME": "to define" 
+				},
 				"projects": {
 					"type": "array",
-					"items": [ { "$ref": "#/definitions/welcome-project" } ],
-					"minItems": 1,
-					"additionalItems": { "$ref": "#/definitions/project"} 
+					"items": {
+						"$ref": "#/definitions/project"
+					},
+					"minItems": 1
 				}
 				
 			},
-			"required": ["projects"]
+			"required": ["title", "projects"]
 		},
-		
-		"project-common": {
+
+		"types": {
+			"contextual-variable": {
+				"type": "string",
+				"__FIXME": "pattern: <ctx/ref/prop1>"
+			},
+			"contextual-string": {
+				"type": "string",
+				"__FIXME": "highlight the fact that can contain references such as ' test 123 <ctx/ref/prop1>'?"
+			}
+		},
+
+		"project": {
 			"type": "object",
 			"properties": {
 				"guid": {
-					"type": "string"
+					"$ref": "http://reference.focusnet.eu/schemas/focus-object/v1.0#/definitions/types/identifier"
 				},
 				"iterator": {
-					"type": ["null", "string"]
+					"$ref": "#/definitions/types/contextual-variable"
+				},
+				"data": { 
+					"type": "object", 
+					"__FIXME": "to define" 
 				},
 				"title": {
-					"$ref": "http://reference.focusnet.eu/schemas/focus-data-sample/v1.0#/definitions/contextual-string"
+					"$ref": "#/definitions/types/contextual-string"
 				},
 				"description": {
-					"$ref": "http://reference.focusnet.eu/schemas/focus-data-sample/v1.0#/definitions/contextual-string"
+					"$ref": "#/definitions/types/contextual-string"
 				},
 				"widgets": {
 					"type": "array",
@@ -60,11 +87,18 @@
 							"guid": {
 								"$ref": "http://reference.focusnet.eu/schemas/focus-object/v1.0#/definitions/types/identifier"
 							},
+							"iterator": {
+								"$ref": "#/definitions/types/contextual-variable"
+							},
+							"data": { 
+								"type": "object", 
+								"__FIXME": "to define" 
+							},
 							"title": {
-								"$ref": "http://reference.focusnet.eu/schemas/focus-data-sample/v1.0#/definitions/contextual-string"
+								"$ref": "#/definitions/types/contextual-string"
 							},
 							"description": {
-								"$ref": "http://reference.focusnet.eu/schemas/focus-data-sample/v1.0#/definitions/contextual-string"
+								"$ref": "#/definitions/types/contextual-string"
 							},
 							"widgets": {
 								"type": "array",
@@ -72,9 +106,12 @@
 									"$ref": "#/definitions/widget-reference"
 								},
 								"minItems": 1
+							},
+							"disabled": {
+								"type": "boolean"
 							}
 						},
-						"required": ["guid", "title", "widgets"]
+						"required": ["guid", "title"]
 					},
 					"minItems": 1
 				},
@@ -92,57 +129,19 @@
 					},
 					"minItems": 1
 				},
-				"notifications": {
+				"projects": {
 					"type": "array",
-					"FIXME___items": {
-						"$___FIXMEref___FIXME": "#/definitions/page-reference"
+					"items": {
+						"$ref": "#/definitions/project"
 					},
 					"minItems": 1
-				}				
+				}		
+			},
+			"disabled": {
+				"type": "boolean"
 			},
 			"required": ["guid", "title"],
 			"additionalProperties": false
-		},
-		
-		"welcome-project": {
-			"allOf": [
-				{
-					"$ref": "#/definitions/project-common"
-				},
-				{
-					"type": "object",
-					"properties": {
-						"guid": {
-							"type": "string",
-							"enum": ["__welcome__"]
-						},
-						"iterator": {
-							"type": "null"
-						}
-					},
-					"required": ["guid"]
-				}
-			]
-		},
-		
-		"project": {
-			"allOf": [
-				{
-					"$ref": "#/definitions/project-common"
-				},
-				{
-					"type": "object",
-					"properties": {
-						"guid": {
-							"$ref": "http://reference.focusnet.eu/schemas/focus-object/v1.0#/definitions/types/identifier"
-						},
-						"iterator": {
-							"$ref": "http://reference.focusnet.eu/schemas/focus-data-sample/v1.0#/definitions/data-acquisition"
-						}
-					},
-					"required": ["guid"]
-				}
-			]
 		},
 		
 		
@@ -167,25 +166,11 @@
 					"type": {
 						"type": "string"
 					},
-					
-					"FIXMEiterator": {},
 
-					"params": {
-						"type": "object",
-						"patternProperties": {
-							"^[a-z][a-zA-Z0-9_-]+$": {
-								"$ref": "http://reference.focusnet.eu/schemas/focus-data-sample/v1.0#/definitions/data-acquisition"
-							}
-						},
-						"minProperties": 1,
-						"additionalProperties": false
-					}
+					"__FIXME": "fill missing specification; keep same json path as in FOCUS Mobile source code, e.g. #/definitions/widget/visualize/piechart (not strictly mandatory, but that's cleaner)"
 				},
 				"required": ["guid", "type"]
-			},
-			
-			"visualize": {},
-			"collect": {}
+			}
 			
 		},
 		

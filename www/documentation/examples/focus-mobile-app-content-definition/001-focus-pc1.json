@@ -1,0 +1,510 @@
+{
+	"__comment": "FOCUS Mobile application content - PILOT CASE I",
+	"url": "http://obfuscated-path/pilot-case-1-v2.json",
+	"type": "http://reference.focusnet.eu/schemas/focus-mobile-app-content-definition/v0.1",
+	"version": 11,
+	"owner": "123",
+	"creationDateTime": "2015-08-24T14:25:14+00:00",
+	"editor": "123",
+	"editionDateTime": "2015-09-09T14:19:17+00:00",
+	"active": true,
+
+	"language": "en",
+	"title": "FOCUS Pilot Case I - Planning and Control in Forest Management - Winterthur",
+
+	"data": {
+		"whole-forest": "https://obfuscated-path/forest"
+	},
+
+	"projects": [
+
+		{
+			"guid": "forest-general-information",
+			"title": "Forest information",
+			"description": "General purpose information about the Lindberg forest.",
+			"pages": [
+				{
+					"guid": "forest-contractual-info",
+					"title": "Contractual information",
+					"disabled": true
+				},
+				{
+					"guid": "forest-key-persons",
+					"title": "Important contacts",
+					"disabled": true
+				}
+			],
+			"dashboards": [
+				{
+					"pageid": "forest-contractual-info"
+				},
+				{
+					"pageid": "forest-key-persons"
+				}
+			],
+			"tools": [
+
+			]
+		},
+
+		{
+			"guid": "project-in-forest",
+			"iterator": "<ctx/whole-forest/project_urls>",
+			"title": "<ctx/$iterator:project-in-forest$/name>",
+			"widgets": [
+				{
+					"guid": "widget-situation-map",
+					"type": "#/definitions/widget/visualize/html5-widget",
+					"field": "widget-project-map-1",
+					"config": {
+						"webapp-identifier": "fi.simosol.focus.map",
+						"context": "<ctx/$iterator:project-in-forest$/$url$>"
+					}
+				},
+				{
+					"guid": "widget-moti-for-project-intro",
+					"type": "#/definitions/widget/visualize/text",
+					"config": {
+						"content": "<h6>What is MOTI?</h6><p>MOTI takes advantage of Smartphone technology for the simple and convenient capturing of key variables concerning the condition of forests. The Android application is specifically designed for forestry professionals to capture in an easy, cost effective and reliable manner the key dendrometric variables such as basal area, number of trees per ha, tree height and stock, as a single measurement combined in a sample plot, or at the level of a stand inventory with automatic calculation of the error range of the estimations.</p><p>MOTI thus provides the solid basis for decision making directly in the forest. For example, this information can be used for tree marking or for planning measures in the context of developing a forest management plan.</p><p>The use of MOTI is not only limited to the stand level. Thanks to the possibility of capturing samples, the Smartphone application can also be used in the context of making simple inventories for a forest management unit.</p><p>An Internet connection is not required (except for accessing the Help page).</p><p><a href=\"http://www.moti.ch\">www.moti.ch</a>"
+					}
+				},
+				{
+					"guid": "widget-moti-for-project",
+					"type": "#/definitions/widget/collect/external-app",
+					"title": "Run MOTI",
+					"field": "field-moti-1",
+					"config": {
+						"app-identifier": "ch.bfh.moti.SamplePlots"
+					}
+				}
+
+			],
+			"pages": [
+				{
+					"guid": "project-general-information",
+					"title": "General information",
+					"disabled": true
+				},
+				{
+					"guid": "project-map",
+					"title": "Situation map",
+					"widgets": [
+						{ "widgetid": "widget-situation-map" }
+					]
+				},
+				{
+					"guid": "project-moti",
+					"title": "Add sample plots with MOTI",
+					"widgets": [
+						{
+							"widgetid": "widget-moti-for-project"
+						},
+						{
+							"widgetid": "widget-moti-for-project-intro"
+						}
+					]
+				}
+			],
+			"dashboards": [
+				{
+					"pageid": "project-general-information"
+				},
+				{
+					"pageid": "project-map"
+				}
+			],
+			"tools": [
+				{
+					"pageid": "project-moti"
+				}
+			],
+
+			"projects": [
+				{
+					"guid": "stand",
+					"iterator": "<ctx/$iterator:project-in-forest$/stands_urls>",
+					"title": "Stand #<ctx/$iterator:stand$/oid>",
+					"widgets": [
+						{
+							"guid": "widget-map-stand",
+							"type": "#/definitions/widget/visualize/html5-widget",
+							"field": "widget-stand-map-1",
+							"config": {
+								"webapp-identifier": "fi.simosol.focus.map",
+								"context": "<ctx/$iterator:stand$/$url$>"
+							}
+						},
+						{
+							"guid": "widget-edit-stand-intro",
+							"type": "#/definitions/widget/visualize/text",
+							"title": "Stand attributes modification",
+							"config": {
+								"content": "The following stand attributes can be modified."
+							}
+						},
+						{
+							"guid": "widget-edit-stand-col-1",
+							"type": "#/definitions/widget/collect/form",
+							"field": "form-1",
+							"config": {
+								"f0": {
+									"type": "#/definitions/widget/collect/form/fields/textfield",
+									"mandatory": true,
+									"readonly": true,
+									"label": "Stand identification",
+									"default": "<ctx/$iterator:stand$/oid>"
+								},
+								"f1": {
+									"type": "#/definitions/widget/collect/form/fields/textfield",
+									"mandatory": true,
+									"readonly": false,
+									"label": "Basal area (m2/ha)",
+									"input-type": "decimal",
+									"decimals-number": 0,
+									"default": "<ctx/$iterator:stand$/G>"
+								},
+								"f2": {
+									"type": "#/definitions/widget/collect/form/fields/textfield",
+									"mandatory": true,
+									"readonly": false,
+									"label": "Number of stems (-/ha)",
+									"input-type": "decimal",
+									"decimals-number": 0,
+									"default": "<ctx/$iterator:stand$/N>"
+								},
+								"f3": {
+									"type": "#/definitions/widget/collect/form/fields/textfield",
+									"mandatory": true,
+									"readonly": false,
+									"label": "Growing stock (m3/ha)",
+									"input-type": "decimal",
+									"decimals-number": 0,
+									"default": "<ctx/$iterator:stand$/V>"
+								},
+								"f4": {
+									"type": "#/definitions/widget/collect/form/fields/textfield",
+									"mandatory": true,
+									"readonly": false,
+									"label": "ddom (cm)",
+									"input-type": "decimal",
+									"decimals-number": 0,
+									"default": "<ctx/$iterator:stand$/Dd>"
+								},
+								"f5": {
+									"type": "#/definitions/widget/collect/form/fields/textfield",
+									"mandatory": true,
+									"readonly": false,
+									"label": "hdom (cm)",
+									"input-type": "decimal",
+									"decimals-number": 0,
+									"default": "<ctx/$iterator:stand$/Hd>"
+								},
+								"f6": {
+									"type": "#/definitions/widget/collect/form/fields/textfield",
+									"mandatory": true,
+									"readonly": false,
+									"label": "dg (cm)",
+									"input-type": "decimal",
+									"decimals-number": 0,
+									"default": "<ctx/$iterator:stand$/D>"
+								},
+								"f8": {
+									"type": "#/definitions/widget/collect/form/fields/textfield",
+									"mandatory": true,
+									"readonly": true,
+									"label": "Inventory date",
+									"default": "<ctx/$iterator:stand$/inventoryDate>"
+								},
+								"f9": {
+									"type": "#/definitions/widget/collect/form/fields/textfield",
+									"mandatory": true,
+									"readonly": false,
+									"label": "Stand area (ha)",
+									"input-type": "decimal",
+									"decimals-number": 2,
+									"default": "<ctx/$iterator:stand$/area>"
+								},
+								"f10": {
+									"type": "#/definitions/widget/collect/form/fields/textfield",
+									"mandatory": true,
+									"readonly": false,
+									"label": "Degree of canopy cover (%)",
+									"input-type": "decimal",
+									"decimals-number": 0,
+									"default": "<ctx/$iterator:stand$/canopyCover>"
+								},
+								"f11": {
+									"type": "#/definitions/widget/collect/form/fields/select",
+									"label": "Stand basic structure",
+									"mandatory": false,
+									"readonly": false,
+									"options-texts": ["even-aged", "uneven-aged"],
+									"options-values": ["1", "2"],
+									"default": "<ctx/$iterator:stand$/structure>"
+								}
+							}
+						},
+						{
+							"guid": "widget-edit-stand-col-2",
+							"type": "#/definitions/widget/collect/form",
+							"field": "form-1-2",
+							"config": {
+								"f7-PRFI": {
+									"type": "#/definitions/widget/collect/form/fields/textfield",
+									"mandatory": true,
+									"readonly": false,
+									"label": "Percentage of spruce (%G)",
+									"input-type": "decimal",
+									"decimals-number": 0,
+									"default": "<ctx/$iterator:stand$/PRFI>"
+								},
+								"f7-PRTA": {
+									"type": "#/definitions/widget/collect/form/fields/textfield",
+									"mandatory": true,
+									"readonly": false,
+									"label": "Percentage of silver fir (%G)",
+									"input-type": "decimal",
+									"decimals-number": 0,
+									"default": "<ctx/$iterator:stand$/PRTA>"
+								},
+								"f7-PRFO": {
+									"type": "#/definitions/widget/collect/form/fields/textfield",
+									"mandatory": true,
+									"readonly": false,
+									"label": "Percentage of scots pine (%G)",
+									"input-type": "decimal",
+									"decimals-number": 0,
+									"default": "<ctx/$iterator:stand$/PRFO>"
+								},
+								"f7-PRLA": {
+									"type": "#/definitions/widget/collect/form/fields/textfield",
+									"mandatory": true,
+									"readonly": false,
+									"label": "Percentage of larch (%G)",
+									"input-type": "decimal",
+									"decimals-number": 0,
+									"default": "<ctx/$iterator:stand$/PRLA>"
+								},
+								"f7-PRAN": {
+									"type": "#/definitions/widget/collect/form/fields/textfield",
+									"mandatory": true,
+									"readonly": false,
+									"label": "Percentage of coniferous (%G)",
+									"input-type": "decimal",
+									"decimals-number": 0,
+									"default": "<ctx/$iterator:stand$/PRAN>"
+								},
+								"f7-PRBU": {
+									"type": "#/definitions/widget/collect/form/fields/textfield",
+									"mandatory": true,
+									"readonly": false,
+									"label": "Percentage of beech (%G)",
+									"decimals-number": 0,
+									"input-type": "decimal",
+									"default": "<ctx/$iterator:stand$/PRBU>"
+								},
+								"f7-PREI": {
+									"type": "#/definitions/widget/collect/form/fields/textfield",
+									"mandatory": true,
+									"readonly": false,
+									"label": "Percentage of oak (%G)",
+									"input-type": "decimal",
+									"decimals-number": 0,
+									"default": "<ctx/$iterator:stand$/PREI>"
+								},
+								"f7-PREA": {
+									"type": "#/definitions/widget/collect/form/fields/textfield",
+									"mandatory": true,
+									"readonly": false,
+									"label": "Percentage of ash (%G)",
+									"input-type": "decimal",
+									"decimals-number": 0,
+									"default": "<ctx/$iterator:stand$/PREA>"
+								},
+								"f7-PRAH": {
+									"type": "#/definitions/widget/collect/form/fields/textfield",
+									"mandatory": true,
+									"readonly": false,
+									"label": "Percentage of maple (%G)",
+									"input-type": "decimal",
+									"decimals-number": 0,
+									"default": "<ctx/$iterator:stand$/PRAH>"
+								},
+								"f7-PRAL": {
+									"type": "#/definitions/widget/collect/form/fields/textfield",
+									"mandatory": true,
+									"readonly": false,
+									"label": "Percentage of other hardwood (%G)",
+									"input-type": "decimal",
+									"decimals-number": 0,
+									"default": "<ctx/$iterator:stand$/PRAL>"
+								}
+							}
+						},
+						{
+							"guid": "widget-edit-stand-submit",
+							"type": "#/definitions/widget/collect/submit",
+							"field": "submit-1",
+							"config": {
+								"label": "Submit"
+							}
+						},
+						{
+							"guid": "widget-moti-stand-for-project-intro",
+							"type": "#/definitions/widget/visualize/text",
+							"config": {
+								"content": "<h6>What is MOTI?</h6><p>MOTI takes advantage of Smartphone technology for the simple and convenient capturing of key variables concerning the condition of forests. The Android application is specifically designed for forestry professionals to capture in an easy, cost effective and reliable manner the key dendrometric variables such as basal area, number of trees per ha, tree height and stock, as a single measurement combined in a sample plot, or at the level of a stand inventory with automatic calculation of the error range of the estimations.</p><p>MOTI thus provides the solid basis for decision making directly in the forest. For example, this information can be used for tree marking or for planning measures in the context of developing a forest management plan.</p><p>The use of MOTI is not only limited to the stand level. Thanks to the possibility of capturing samples, the Smartphone application can also be used in the context of making simple inventories for a forest management unit.</p><p>An Internet connection is not required (except for accessing the Help page).</p><p><a href=\"http://www.moti.ch\">www.moti.ch</a>"
+							}
+						},
+						{
+							"guid": "widget-moti-stand-for-project",
+							"type": "#/definitions/widget/collect/external-app",
+							"title": "Sample plot edition",
+							"field": "field-moti-2",
+							"config": {
+								"app-identifier": "ch.bfh.moti.EditSamplePlot",
+								"input-object": "<ctx/$iterator:stand$/$url$>",
+								"launcher-button-label": "Edit this sample plot"
+							}
+						},
+						{
+							"guid": "widget-intervention",
+							"type": "#/definitions/widget/collect/form",
+							"field": "form-2",
+							"title": "Intervention",
+							"config": {
+								"f0b": {
+									"type": "#/definitions/widget/collect/form/fields/textfield",
+									"mandatory": true,
+									"readonly": true,
+									"label": "Operation identification",
+									"default": "<ctx/$iterator:page-stand-intervention$/uid>"
+								},
+								"f1": {
+									"type": "#/definitions/widget/collect/form/fields/textfield",
+									"mandatory": true,
+									"label": "Planned date",
+									"default": "<ctx/$iterator:page-stand-intervention$/date_planned>"
+								},
+								"f2": {
+									"type": "#/definitions/widget/collect/form/fields/select",
+									"label": "Operation group",
+									"mandatory": false,
+									"options-texts": ["Thinning", "Final felling/regeneration felling"],
+									"options-values": ["1", "2"],
+									"default": "<ctx/$iterator:page-stand-intervention$/op_group>"
+								},
+								"f3": {
+									"type": "#/definitions/widget/collect/form/fields/textfield",
+									"mandatory": true,
+									"label": "Operation name",
+									"default": "<ctx/$iterator:page-stand-intervention$/op_name>"
+								},
+								"f5": {
+									"type": "#/definitions/widget/collect/form/fields/select",
+									"label": "Status",
+									"mandatory": false,
+									"options-texts": ["Proposed by model (Iptim)", "Proposedd by forest planner", "Assigned for actual execution", "Ongoing operation", "Finished"],
+									"options-values": ["1", "2", "3", "4", "5"],
+									"default": "<ctx/$iterator:page-stand-intervention$/status>"
+								},
+								"f6": {
+									"type": "#/definitions/widget/collect/form/fields/select",
+									"label": "Type",
+									"mandatory": false,
+									"options-texts": ["Final felling", "Thinning"],
+									"options-values": ["1", "5"],
+									"default": "<ctx/$iterator:page-stand-intervention$/type>"
+								}
+							}
+						},
+						{
+							"guid": "widget-edit-intervention-submit",
+							"type": "#/definitions/widget/collect/submit",
+							"field": "submit-5",
+							"config": {
+								"label": "Submit"
+							}
+						}
+					],
+					"pages": [
+						{
+							"guid": "page-stand",
+							"title": "Stand map",
+							"widgets": [
+								{"widgetid": "widget-map-stand"}
+							]
+						},
+						{
+							"guid": "page-stand-edit",
+							"title": "Edit attributes",
+							"widgets": [
+								{
+									"widgetid": "widget-edit-stand-intro"
+								},
+								{
+									"widgetid": "widget-edit-stand-col-1",
+									"layout": {
+										"width": "2of4"
+									}
+								},
+								{
+									"widgetid": "widget-edit-stand-col-2",
+									"layout": {
+										"width": "2of4"
+									}
+								},
+								{
+									"widgetid": "widget-edit-stand-submit"
+								}
+							]
+						},
+						{
+							"guid": "page-stand-intervention",
+							"iterator": "<ctx/$iterator:stand$/operation_urls>",
+							"title": "Intervention <ctx/$iterator:page-stand-intervention$/date_planned>",
+							"widgets": [
+								{"widgetid": "widget-intervention"},
+								{"widgetid": "widget-edit-intervention-submit"}
+							]
+						},
+						{
+							"guid": "page-stand-edit-with-moti",
+							"title": "Edit with MOTI",
+							"widgets": [
+								{
+									"widgetid": "widget-moti-stand-for-project"
+								},
+								{
+									"widgetid": "widget-moti-stand-for-project-intro"
+								}
+							]
+						}
+					],
+					"dashboards": [
+						{
+							"pageid": "page-stand"
+						},
+						{
+							"pageid": "page-stand-edit"
+						},
+						{
+							"pageid": "page-stand-intervention"
+						}
+					],
+					"tools": [
+						{
+							"pageid": "page-stand-edit-with-moti"
+						}
+					]
+
+				}
+			]
+
+		}
+
+
+
+
+	]
+}

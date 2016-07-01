@@ -1,0 +1,25 @@
+{
+	"__comment": "An example of sample containing fields with all possible types of data.",
+
+	"type": "http://reference.focusnet.eu/schemas/focus-data-sample/v1.0",
+
+	"url": "http://tribble:8123/FOCUS/focus-resources-server/www/data/focus-data-sample-v1.0/test-002.json",
+	"version": 1,
+	"owner": "123",
+	"creationDateTime": "2015-08-24T14:25:14+00:00",
+	"editor": "123",
+	"editionDateTime": "2015-09-09T14:19:17+00:00",
+	"active": true,
+
+	"data": {
+		
+		"prop1": "a simple string without explicit type setting",
+		"prop2": 123,
+		"prop3": 123.123,
+		"prop4": ["a simple string without explicit type setting", "sab"],
+		"prop5": [1,23.23],
+"name":"my name",
+		"my-url": "http://focus.yatt.ch/debug/focus-sample-2.json",
+		"list-of-machines": ["http://focus.yatt.ch/debug/focus-sample-2.json", "http://focus.yatt.ch/debug/focus-sample-3.json"]
+	}
+}
