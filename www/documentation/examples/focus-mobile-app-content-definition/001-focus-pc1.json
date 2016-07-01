@@ -1,7 +1,7 @@
 {
 	"__comment": "FOCUS Mobile application content - PILOT CASE I",
 	"url": "http://obfuscated-path/pilot-case-1-v2.json",
-	"type": "http://reference.focusnet.eu/schemas/focus-mobile-app-content-definition/v0.1",
+	"type": "http://reference.focusnet.eu/schemas/focus-mobile-app-content-definition/v1.0",
 	"version": 11,
 	"owner": "123",
 	"creationDateTime": "2015-08-24T14:25:14+00:00",
