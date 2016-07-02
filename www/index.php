@@ -97,7 +97,6 @@ function look_for_refs($obj)
 	}
 	return $ret;	
 }
-$duh = 'ebug';
 
 ?><!DOCTYPE html>
 <html>
@@ -109,10 +108,6 @@ $duh = 'ebug';
 	</head>
 
 	<body>
-
-	<pre>
-	<?php var_dump($duh); ?>
-	</pre>
 	
 		<h1>JSON Schemas</h1>
 		
